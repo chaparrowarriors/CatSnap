@@ -7,6 +7,6 @@
 script = ExtResource("1_bku42")
 
 [node name="FondoTemporal" type="Sprite2D" parent="."]
-position = Vector2(576, 323.75)
+position = Vector2(575, 320)
 scale = Vector2(1.146, 0.957399)
 texture = ExtResource("2_q08pi")

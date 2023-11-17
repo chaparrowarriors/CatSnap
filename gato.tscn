@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk6lcj5o32psv"]
+
+[ext_resource type="Texture2D" uid="uid://b6whbcgjt1o5i" path="res://gato_temporal.png" id="1_0cnjb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dkpw"]
+
+[node name="gato" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2dkpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0cnjb")
