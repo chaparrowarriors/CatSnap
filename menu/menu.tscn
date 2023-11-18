@@ -55,4 +55,5 @@ layout_mode = 2
 text = "QUITAR"
 
 [connection signal="pressed" from="VBoxContainer/StartBoton" to="." method="_on_start_boton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowToPlayBoton" to="." method="_on_how_to_play_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitBoton" to="." method="_on_quit_boton_pressed"]

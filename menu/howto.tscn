@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3lrkck1afp8u"]
+
+[ext_resource type="Script" path="res://menu/howto.gd" id="1_7gpev"]
+[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_i5htk"]
+[ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="2_8u7pg"]
+[ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://menu/fry.png" id="3_ahgi1"]
+
+[node name="howto" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gpev")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(634, 358)
+texture = ExtResource("1_i5htk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 720.0
+theme = ExtResource("2_8u7pg")
+bbcode_enabled = true
+text = "
+
+[center][font_size=40]Cómo jugar[/font_size]
+
+[font_size=30]
+1. Tienes una cámara con la que vas a hacer fotos
+
+2. Tu objetivo es fotografiar al escurridizo Fry (el gato naranja)
+
+3. Fry aparecerá desde uno de los lados de la pantalla
+
+4. Para fotografiarlo tienes que clickar sobre el 
+
+5. Cuanto más rápido seas haciendo la foto más puntos conseguirás
+
+6. Suerte!"
+
+[node name="Fry" type="Sprite2D" parent="."]
+position = Vector2(210, 562)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_ahgi1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 560.0
+offset_right = 476.0
+offset_bottom = 592.0
+theme = ExtResource("2_8u7pg")
+text = "<- Este es Fry"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 561.0
+offset_right = 1030.0
+offset_bottom = 605.0
+theme = ExtResource("2_8u7pg")
+text = "Volver"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 550.0
+offset_right = 712.0
+offset_bottom = 616.0
+theme = ExtResource("2_8u7pg")
+text = "Jugar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

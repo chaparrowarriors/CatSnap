@@ -14,6 +14,8 @@ func _process(delta):
 func _on_start_boton_pressed():
 	get_tree().change_scene_to_file("res://main.tscn")
 
+func _on_how_to_play_boton_pressed():
+	get_tree().change_scene_to_file("res://menu/howto.tscn") 
 
 func _on_quit_boton_pressed():
 	get_tree().quit()
