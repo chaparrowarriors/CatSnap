@@ -77,5 +77,9 @@ func inicializar_rata():
 	var escena_rata = preload("res://animales/rata.tscn")
 	# Instancia la escena
 	var rata = escena_rata.instantiate()
+	var rata2 = escena_rata.instantiate()
+	var rata3 = escena_rata.instantiate()
 	# Agrega el RigidBody al nodo actual
 	add_child(rata)
+	add_child(rata2)
+	add_child(rata3)

@@ -20,7 +20,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time_elapsed += delta
-	print(time_elapsed)
 	if(time_elapsed > 1):
 		random = randi_range(1, 8)
 		time_elapsed = 0
