@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://ce7djsuglrgky"]
+
+[ext_resource type="Script" path="res://animales/dragon.gd" id="1_ebhhk"]
+[ext_resource type="Texture2D" uid="uid://dqdybdb6e5par" path="res://assets/secuenciadragon2.png" id="2_p3xnu"]
+[ext_resource type="Texture2D" uid="uid://c1y4b1dbb5v2a" path="res://assets/secuenciadragon.png" id="3_1p6cx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laf1a"]
+atlas = ExtResource("2_p3xnu")
+region = Rect2(0, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bg5t2"]
+atlas = ExtResource("2_p3xnu")
+region = Rect2(1000, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71eon"]
+atlas = ExtResource("3_1p6cx")
+region = Rect2(0, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix0la"]
+atlas = ExtResource("3_1p6cx")
+region = Rect2(1000, 0, 1000, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndrhe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laf1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bg5t2")
+}],
+"loop": true,
+"name": &"derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71eon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix0la")
+}],
+"loop": true,
+"name": &"izquierda",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_ebhhk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_ndrhe")
+animation = &"derecha"
+frame = 1
+frame_progress = 0.958499

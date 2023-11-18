@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkcb135r32kcu"]
+[gd_scene load_steps=12 format=3 uid="uid://dkcb135r32kcu"]
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_vgv73"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="2_3ccod"]
 [ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://assets/fry.png" id="3_xnm0l"]
 [ext_resource type="Texture2D" uid="uid://bf7f8ufi5ktf5" path="res://menu/main-title.png" id="3_yi1yn"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="4_eg0fd"]
-[ext_resource type="Texture2D" uid="uid://jvnunucfge37" path="res://assets/raton1.png" id="4_ivyvy"]
-[ext_resource type="Texture2D" uid="uid://cfu5mrctu3wg7" path="res://assets/buey1.png" id="7_ddfx0"]
+[ext_resource type="Texture2D" uid="uid://jvnunucfge37" path="res://assets/raton_portada.png" id="4_ivyvy"]
+[ext_resource type="Texture2D" uid="uid://3br1r8qqn7ia" path="res://assets/dragon_portada.png" id="5_nra7k"]
+[ext_resource type="Texture2D" uid="uid://enwi6gsolb75" path="res://assets/conejo_portada.png" id="7_citdh"]
+[ext_resource type="Texture2D" uid="uid://cfu5mrctu3wg7" path="res://assets/buey_portada.png" id="7_ddfx0"]
 [ext_resource type="AudioStream" uid="uid://jotdcjbpj1fm" path="res://sonidos/Menu.mp3" id="8_cy58c"]
+[ext_resource type="Texture2D" uid="uid://bxkm1d8rrsmct" path="res://assets/tigre_portada.png" id="10_dxm26"]
 
 [node name="Menu" type="Control"]
 custom_minimum_size = Vector2(1270, 720)
@@ -36,6 +39,23 @@ position = Vector2(867, 215)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_ivyvy")
 flip_h = true
+
+[node name="Dragon1" type="Sprite2D" parent="."]
+position = Vector2(146, 222)
+rotation = -0.359538
+texture = ExtResource("5_nra7k")
+flip_h = true
+
+[node name="Buey1" type="Sprite2D" parent="."]
+position = Vector2(1117, 581)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ddfx0")
+
+[node name="Conejo1" type="Sprite2D" parent="."]
+position = Vector2(1176, 259)
+rotation = 0.418879
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_citdh")
 
 [node name="title" type="Sprite2D" parent="."]
 position = Vector2(650, 209)
@@ -69,10 +89,10 @@ text = "COMO JUGAR"
 layout_mode = 2
 text = "QUITAR"
 
-[node name="Buey1" type="Sprite2D" parent="."]
-position = Vector2(1221, 580)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_ddfx0")
+[node name="Tigre3" type="Sprite2D" parent="."]
+position = Vector2(-163, 662)
+texture = ExtResource("10_dxm26")
+flip_h = true
 
 [node name="cancion_menu" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_cy58c")
