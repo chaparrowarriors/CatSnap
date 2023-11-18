@@ -28,10 +28,23 @@ func _input(event):
 # Obtén las coordenadas del evento de clic en relación con esta escena
 			var click_position = event.position
 # Capturamos la ventana al hacer click
-			var imagen = get_viewport().get_texture().get_image()
+			var imagen = get_viewport().get_texture()
+			var image_data = imagen.get_data()
+			var image_path = "res://screenshot.png"
+			
+			var image = Image.new()
+			
+			image.create_from_data(imagen.get_width(), imagen.get_height(), false, Image.FORMAT_RGBA8, image_data)
+			
+		# Guardar la imagen como archivo PNG (puedes ajustar la ruta y el nombre del archivo)
+			#var file = File.new()
+			#file.open("user://screenshot.png", File.WRITE)
+			#image.save_png(file)
+			#file.close()
+			
 			await get_tree().create_timer(0.1).timeout
 			if get_node("gato").velocidad == 0:
-				pass
+				get_tree().change_scene_to_file("res://polaroid.tscn")
 			else:
 				get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
 				

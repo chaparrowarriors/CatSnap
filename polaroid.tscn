@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2n61itm2gshs"]
+[gd_scene load_steps=8 format=3 uid="uid://2ppgdlx0f1ea"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
@@ -30,7 +30,6 @@ texture = ExtResource("3_lmtwe")
 
 [node name="screenshot" type="Sprite2D" parent="polaroid"]
 show_behind_parent = true
-scale = Vector2(1, 1)
 texture = ExtResource("4_eykvk")
 
 [node name="Label" type="Label" parent="."]
