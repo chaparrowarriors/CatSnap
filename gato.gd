@@ -6,6 +6,7 @@ var random = randi_range(1, 4) # Número aleatorio para cases.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+		
 	ini_posicion()
 	ini_velocidad()
 	ini_animacion()
@@ -13,7 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_axis_velocity(direccion * velocidad)
+	set_linear_velocity(direccion * velocidad)
 
 func ini_posicion():
 	# Constantes de posición de pantalla x min/max y y min/max
@@ -60,7 +61,7 @@ func ini_velocidad():
 	elif random == 4:
 		direccion = Vector2(-1, 0)
 		
-	set_axis_velocity(direccion * velocidad)
+	set_linear_velocity(direccion * velocidad)
 	
 func ini_animacion():
 		# Asignamos animacion
@@ -72,3 +73,10 @@ func ini_animacion():
 		$AnimatedSprite2D.play('derecha')
 	elif random == 4:
 		$AnimatedSprite2D.play('izquierda')
+
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			velocidad = 0
+
+

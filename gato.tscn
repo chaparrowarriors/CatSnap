@@ -62,6 +62,7 @@ animations = [{
 }]
 
 [node name="gato" type="RigidBody2D"]
+input_pickable = true
 script = ExtResource("1_ofdsw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -71,3 +72,5 @@ shape = SubResource("RectangleShape2D_2dkpw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jq2iq")
 animation = &"derecha"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
