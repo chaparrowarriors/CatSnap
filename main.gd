@@ -14,8 +14,11 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#$gato.set_axis_velocity(Vector2(-100,0))
-	pass
+	var gato_onscreen = get_node("gato")
+	if gato_onscreen != null:
+		var gato_onworld = gato_onscreen.offworld
+		if gato_onscreen.offworld == true:
+			get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
 			
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
@@ -25,6 +28,13 @@ func _input(event):
 			var click_position = event.position
 # Capturamos la ventana al hacer click
 			var imagen = get_viewport().get_texture().get_image()
+			await get_tree().create_timer(0.1).timeout
+			if get_node("gato").velocidad == 0:
+				pass
+			else:
+				get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
+				
+			
 
 
 

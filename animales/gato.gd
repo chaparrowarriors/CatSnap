@@ -5,6 +5,8 @@ var sound_gato: AudioStreamPlayer2D
 var velocidad = 100
 var direccion = Vector2(0, 0)
 var random = randi_range(1, 8) # Número aleatorio para cases.
+var offworld = false
+var onworld = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -129,6 +131,9 @@ func on_screen():
 	if viewport_rect.has_point(position_in_world):
 		if !sound_gato.is_playing() && velocidad > 0:
 			sound_gato.play()
+			onworld = true
 	else:
 		sound_gato.stop()
+		if onworld != false:
+			offworld = true
 
