@@ -5,7 +5,7 @@ extends Control
 func _ready():
 	
 	$polaroid/screenshot.texture = ImageTexture.create_from_image(Global.screenshot)
-	$puntuacion_value.text = str(Global.puntuacion).pad_decimals(2)
+	$puntuacion_value.text = str(Global.puntos).pad_decimals(2)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
