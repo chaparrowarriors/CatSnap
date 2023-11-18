@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq865ws3wyf7i"]
+[gd_scene load_steps=10 format=3 uid="uid://cq865ws3wyf7i"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_bku42"]
 [ext_resource type="Texture2D" uid="uid://8fi20x1uyuly" path="res://assets/fondo.png" id="2_1nqki"]
 [ext_resource type="AudioStream" uid="uid://c2vuyni618sr3" path="res://sonidos/camara.mp3" id="3_7hjqj"]
+[ext_resource type="AudioStream" uid="uid://c6bkkh8uhoerb" path="res://sonidos/Loop 1.mp3" id="4_dmv3u"]
+[ext_resource type="AudioStream" uid="uid://d26yiebnjtduo" path="res://sonidos/Loop 2.mp3" id="5_xy1v2"]
+[ext_resource type="AudioStream" uid="uid://dxr0qgfnpvpvy" path="res://sonidos/Loop 3.mp3" id="6_11cs3"]
+[ext_resource type="AudioStream" uid="uid://ycrsxam0huo5" path="res://sonidos/Loop 4.mp3" id="7_i4y4l"]
+[ext_resource type="AudioStream" uid="uid://knd2uwcv5ay" path="res://sonidos/Loop 5.mp3" id="8_6q10k"]
+[ext_resource type="AudioStream" uid="uid://2on3v6ldgmos" path="res://sonidos/Loop 6.mp3" id="9_23n8e"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_bku42")
@@ -11,6 +17,30 @@ script = ExtResource("1_bku42")
 position = Vector2(640, 358)
 texture = ExtResource("2_1nqki")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="sonido_camara" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7hjqj")
+autoplay = true
+
+[node name="nivel 1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dmv3u")
+autoplay = true
+
+[node name="nivel 2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_xy1v2")
+autoplay = true
+
+[node name="nivel 3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_11cs3")
+autoplay = true
+
+[node name="nivel 4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_i4y4l")
+autoplay = true
+
+[node name="nivel 5" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_6q10k")
+autoplay = true
+
+[node name="nivel 6" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_23n8e")
 autoplay = true

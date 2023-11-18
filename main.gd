@@ -8,20 +8,32 @@ func _ready():
 	#$gato.add_constant_central_force(Vector2(-10,0))
 	#$gato.set_axis_velocity(Vector2(-100,0))
 	time_elapsed = 0
-	sound_camara = $AudioStreamPlayer2D
-	### CAMBIAR CANCIONES CON EL PASO DE NIVEL
+	sound_camara = $sonido_camara
+	$"nivel 1".stop()
+	$"nivel 2".stop()
+	$"nivel 3".stop()
+	$"nivel 4".stop()
+	$"nivel 5".stop()
+	$"nivel 6".stop()
+	
 	match Global.nivel:
 		1:
+			$"nivel 1".play()
 			nivel1()
 		2:
+			$"nivel 2".play()
 			nivel2()
 		3:
+			$"nivel 3".play()
 			nivel3()
 		4:
+			$"nivel 4".play()
 			nivel4()
 		5:
+			$"nivel 5".play()
 			nivel5()
 		6:
+			$"nivel 6".play()
 			nivel6()
 	# Conectar la señal del hijo.
 	
