@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq865ws3wyf7i"]
+[gd_scene load_steps=4 format=3 uid="uid://cq865ws3wyf7i"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_bku42"]
 [ext_resource type="Texture2D" uid="uid://b6n83ptdywg32" path="res://fondo_temporal.png" id="2_q08pi"]
+[ext_resource type="PackedScene" uid="uid://dk6lcj5o32psv" path="res://gato.tscn" id="3_tceg4"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_bku42")
@@ -10,3 +11,6 @@ script = ExtResource("1_bku42")
 position = Vector2(575, 320)
 scale = Vector2(1.146, 0.957399)
 texture = ExtResource("2_q08pi")
+
+[node name="gato" parent="." instance=ExtResource("3_tceg4")]
+position = Vector2(1174, 401)
