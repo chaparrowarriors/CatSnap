@@ -67,7 +67,11 @@ func _input(event):
 			if Global.gatovelocidad == 0:
 				var puntos = (Global.puntos_base / time_elapsed) * Global.nivel
 				Global.puntuacion += puntos
-				get_tree().change_scene_to_file("res://polaroid.tscn")
+				if Global.nivel == Global.nivel_final:
+					Global.victoria = true
+					get_tree().change_scene_to_file("res://menu/end_screen.tscn")
+				else:
+					get_tree().change_scene_to_file("res://polaroid.tscn")
 			else:
 				get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
 

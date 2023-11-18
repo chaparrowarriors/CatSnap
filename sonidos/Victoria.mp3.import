@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Victoria.mp3-77d15b758c2f798f8cc96e6b1538a8a9
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

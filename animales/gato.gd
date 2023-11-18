@@ -17,7 +17,7 @@ func _ready():
 	
 	ini_posicion()
 	ini_animacion()
-	await get_tree().create_timer(3).timeout
+	#await get_tree().create_timer(3).timeout
 	ini_velocidad()
 
 

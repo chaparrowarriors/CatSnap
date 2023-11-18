@@ -4,6 +4,10 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Puntuacion.text = str(Global.puntuacion).pad_decimals(2)
+	if Global.victoria:
+		$sonido_victoria.play()
+	else:
+		$sonido_derrota.play()
 	
 
 

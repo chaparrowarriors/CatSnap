@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://nal10k0gnepr"]
+[gd_scene load_steps=10 format=3 uid="uid://nal10k0gnepr"]
 
 [ext_resource type="Script" path="res://menu/end_screen.gd" id="1_emmhs"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_swxx7"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://w1q3m7wxejmm" path="res://menu/post-it.png" id="4_u0iud"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="6_2v1dr"]
 [ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://assets/fry.png" id="6_hcsui"]
+[ext_resource type="AudioStream" uid="uid://c8rgp0cakq4yt" path="res://sonidos/Victoria.mp3" id="8_bxiyn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yodge"]
 texture = ExtResource("3_xeu4b")
@@ -110,6 +111,11 @@ offset_bottom = 639.0
 theme = ExtResource("6_2v1dr")
 theme_override_font_sizes/font_size = 25
 text = "Salir"
+
+[node name="sonido_victoria" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_bxiyn")
+
+[node name="sonido_derrota" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
