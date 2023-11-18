@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://knd2uwcv5ay"
+path="res://.godot/imported/Loop 5.mp3-68c177ad4f3726ef5461dce0f6888a96.mp3str"
+
+[deps]
+
+source_file="res://sonidos/Loop 5.mp3"
+dest_files=["res://.godot/imported/Loop 5.mp3-68c177ad4f3726ef5461dce0f6888a96.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

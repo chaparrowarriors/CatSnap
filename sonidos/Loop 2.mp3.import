@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d26yiebnjtduo"
+path="res://.godot/imported/Loop 2.mp3-9cdd3fcb853ab97f0d2db6d85574cdc6.mp3str"
+
+[deps]
+
+source_file="res://sonidos/Loop 2.mp3"
+dest_files=["res://.godot/imported/Loop 2.mp3-9cdd3fcb853ab97f0d2db6d85574cdc6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

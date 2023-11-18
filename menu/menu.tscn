@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkcb135r32kcu"]
+[gd_scene load_steps=9 format=3 uid="uid://dkcb135r32kcu"]
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_vgv73"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="2_3ccod"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="4_eg0fd"]
 [ext_resource type="Texture2D" uid="uid://jvnunucfge37" path="res://assets/raton1.png" id="4_ivyvy"]
 [ext_resource type="Texture2D" uid="uid://cfu5mrctu3wg7" path="res://assets/buey1.png" id="7_ddfx0"]
+[ext_resource type="AudioStream" uid="uid://jotdcjbpj1fm" path="res://sonidos/Menu.mp3" id="8_cy58c"]
 
 [node name="Menu" type="Control"]
 custom_minimum_size = Vector2(1270, 720)
@@ -72,6 +73,11 @@ text = "QUITAR"
 position = Vector2(1221, 580)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_ddfx0")
+
+[node name="cancion_menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_cy58c")
+volume_db = 7.495
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartBoton" to="." method="_on_start_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlayBoton" to="." method="_on_how_to_play_boton_pressed"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3lrkck1afp8u"]
+[gd_scene load_steps=6 format=3 uid="uid://d3lrkck1afp8u"]
 
 [ext_resource type="Script" path="res://menu/howto.gd" id="1_7gpev"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_i5htk"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="2_8u7pg"]
 [ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://assets/fry.png" id="3_ahgi1"]
+[ext_resource type="AudioStream" uid="uid://jotdcjbpj1fm" path="res://sonidos/Menu.mp3" id="5_ersrt"]
 
 [node name="howto" type="Control"]
 layout_mode = 3
@@ -74,6 +75,11 @@ offset_bottom = 616.0
 theme = ExtResource("2_8u7pg")
 theme_override_font_sizes/font_size = 35
 text = "Jugar"
+
+[node name="cancion_menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ersrt")
+volume_db = 7.495
+autoplay = true
 
 [connection signal="pressed" from="Volver" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Jugar" to="." method="_on_button_2_pressed"]
