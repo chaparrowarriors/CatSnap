@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var sound_gato: AudioStreamPlayer2D
 
-var velocidad = 700
+var velocidad = 500
 var direccion = Vector2(0, 0)
 var random = randi_range(1, 8) # Número aleatorio para cases.
 var time_elapsed := 0.0
@@ -21,8 +21,9 @@ func _ready():
 func _process(delta):
 	time_elapsed += delta
 	print(time_elapsed)
-	if(randi_range(1, 8) == 3):
+	if(time_elapsed > 1):
 		random = randi_range(1, 8)
+		time_elapsed = 0
 	ini_velocidad()
 	on_screen()
 

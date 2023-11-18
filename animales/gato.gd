@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var sound_gato: AudioStreamPlayer2D
 
-var velocidad = 500
+var velocidad = 200
 var direccion = Vector2(0, 0)
 var random = randi_range(1, 8) # Número aleatorio para cases.
 var offworld = false
@@ -14,8 +14,9 @@ func _ready():
 	sound_gato.play()
 	
 	ini_posicion()
-	ini_velocidad()
 	ini_animacion()
+	await get_tree().create_timer(3).timeout
+	ini_velocidad()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
