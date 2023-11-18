@@ -45,7 +45,7 @@ func _input(event):
 			Global.screenshot.crop(365, 365)
 			
 			await get_tree().create_timer(0.1).timeout
-			if get_node("gato").velocidad == 0:
+			if Global.gatovelocidad == 0:
 				var puntos = (Global.puntos_base / time_elapsed) * Global.nivel
 				Global.puntuacion += puntos
 				get_tree().change_scene_to_file("res://polaroid.tscn")
