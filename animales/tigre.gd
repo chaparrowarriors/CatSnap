@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var velocidad = 100
 var direccion = Vector2(0, 0)
-var random = randi_range(1, 4) # Número aleatorio para cases.
+var random = randi_range(1, 2) # Número aleatorio para cases.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,20 +29,11 @@ func ini_posicion():
 	
 	# Randomizamos posición pero tiene que estar fuera de la pantalla
 
-	# Case 1: Arriba
 	if random == 1:
-		pos_x = randf_range(x_min, x_max)
-		pos_y = y_max + 50
-	# Case 2: Abajo
-	elif random == 2:
-		pos_x = randf_range(x_min, x_max)
-		pos_y = y_min - 50
-	# Case 3: Izquierda
-	elif random == 3:
 		pos_x = x_min - 50
 		pos_y = randf_range(y_min, y_max)
 	# Case 4: Derecha
-	elif random == 4:
+	elif random == 2:
 		pos_x = x_max + 50
 		pos_y = randf_range(y_min, y_max)
 
@@ -52,12 +43,8 @@ func ini_posicion():
 func ini_velocidad():
 	# Asignamos velocidad
 	if random == 1:
-		direccion = Vector2(0, -1)
-	elif random == 2:
-		direccion = Vector2(0, 1)
-	elif random == 3:
 		direccion = Vector2(1, 0)
-	elif random == 4:
+	elif random == 2:
 		direccion = Vector2(-1, 0)
 		
 	set_axis_velocity(direccion * velocidad)
@@ -65,10 +52,6 @@ func ini_velocidad():
 func ini_animacion():
 		# Asignamos animacion
 	if random == 1:
-		$AnimatedSprite2D.play('izquierda')
+		$AnimatedSprite2D.play('derecha')
 	elif random == 2:
-		$AnimatedSprite2D.play('derecha')
-	elif random == 3:
-		$AnimatedSprite2D.play('derecha')
-	elif random == 4:
 		$AnimatedSprite2D.play('izquierda')

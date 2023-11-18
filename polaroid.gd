@@ -5,7 +5,9 @@ extends Control
 func _ready():
 	
 	#$polaroid/screenshot.texture = load("res://screenshot.png")
-	$polaroid/screenshot.texture = get_node("main").screenshot
+	var texture = ImageTexture.new()
+	texture.create_from_image(Global.screenshot)
+	$polaroid/screenshot.texture = texture
 
 	pass
 

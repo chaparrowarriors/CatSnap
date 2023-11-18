@@ -1,16 +1,18 @@
 extends Node2D
 
 var sound_camara: AudioStreamPlayer2D
-var screenshot : Image
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$gato.add_constant_central_force(Vector2(-10,0))
 	#$gato.set_axis_velocity(Vector2(-100,0))
 	sound_camara = $AudioStreamPlayer2D
-	inicializar_gato()
-	inicializar_toro()
-	inicializar_rata()
+	inicializar_animal("gato")
+	inicializar_animal("toro")
+	inicializar_animal("rata")
+	inicializar_animal("rata")
+	inicializar_animal("rata")
+	inicializar_animal("tigre")
 	
 	# Conectar la señal del hijo.
 	
@@ -30,7 +32,7 @@ func _input(event):
 			var click_position = event.position
 # Capturamos la ventana al hacer click
 	# Obtiene la imagen de la pantalla
-			screenshot = get_viewport().get_texture().get_image()
+			Global.screenshot = get_viewport().get_texture().get_image()
 
 			# Guarda la imagen como un archivo PNG (puedes ajustar la ruta y el nombre del archivo)
 			#var file = FileAccess.open("res://screenshot.png", FileAccess.WRITE)
@@ -63,36 +65,8 @@ func _input(event):
 				
 			
 
-
-
-# Utiliza get_node_at_position para obtener el nodo en esa posición
-			#var clicked_node = get_node_at_position(click_position)
-				
-func inicializar_gato():
- # Carga la escena que contiene el RigidBody
-	var escena_gato = preload("res://animales/gato.tscn")
-	# Instancia la escena
-	var gato = escena_gato.instantiate()
-	# Agrega el RigidBody al nodo actual
-	add_child(gato)
-	
-
-func inicializar_toro():
- # Carga la escena que contiene el RigidBody
-	var escena_toro = preload("res://animales/toro.tscn")
-	# Instancia la escena
-	var toro = escena_toro.instantiate()
-	# Agrega el RigidBody al nodo actual
-	add_child(toro)
-
-func inicializar_rata():
- # Carga la escena que contiene el RigidBody
-	var escena_rata = preload("res://animales/rata.tscn")
-	# Instancia la escena
-	var rata = escena_rata.instantiate()
-	var rata2 = escena_rata.instantiate()
-	var rata3 = escena_rata.instantiate()
-	# Agrega el RigidBody al nodo actual
-	add_child(rata)
-	add_child(rata2)
-	add_child(rata3)
+func inicializar_animal(animal):
+	var path = "res://animales/"+animal+".tscn"
+	var escena = load(path)
+	var instancia = escena.instantiate()
+	add_child(instancia)
