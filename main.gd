@@ -6,6 +6,7 @@ func _ready():
 	#$gato.add_constant_central_force(Vector2(-10,0))
 	#$gato.set_axis_velocity(Vector2(-100,0))
 	inicializar_gato()
+	inicializar_toro()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -21,3 +22,10 @@ func inicializar_gato():
 	add_child(gato)
 	
 
+func inicializar_toro():
+ # Carga la escena que contiene el RigidBody
+	var escena_toro = preload("res://toro.tscn")
+	# Instancia la escena
+	var toro = escena_toro.instantiate()
+	# Agrega el RigidBody al nodo actual
+	add_child(toro)
