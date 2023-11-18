@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var sound_gato: AudioStreamPlayer2D
 
-var velocidad = 200
+
 var direccion = Vector2(0, 0)
 var random = randi_range(1, 8) # Número aleatorio para cases.
 var offworld = false
@@ -10,6 +10,7 @@ var onworld = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.gatovelocidad = 200
 	sound_gato = $AudioStreamPlayer2D
 	sound_gato.play()
 	
@@ -21,7 +22,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_linear_velocity(direccion * velocidad)
+	set_linear_velocity(direccion * Global.gatovelocidad)
 	on_screen()
 
 func ini_posicion():
@@ -92,7 +93,7 @@ func ini_velocidad():
 	elif random == 8:
 		direccion = Vector2(-1, -1)
 		
-	set_linear_velocity(direccion * velocidad)
+	set_linear_velocity(direccion * Global.gatovelocidad)
 	
 func ini_animacion():
 		# Asignamos animacion
@@ -116,7 +117,7 @@ func ini_animacion():
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			velocidad = 0
+			Global.gatovelocidad = 0
 			sound_gato.stop()
 			$AnimatedSprite2D.stop()
 
@@ -130,7 +131,7 @@ func on_screen():
 
 	# Verifica si la posición del RigidBody está dentro del Viewport
 	if viewport_rect.has_point(position_in_world):
-		if !sound_gato.is_playing() && velocidad > 0:
+		if !sound_gato.is_playing() && Global.gatovelocidad > 0:
 			sound_gato.play()
 			onworld = true
 	else:
