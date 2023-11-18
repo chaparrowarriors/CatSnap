@@ -1,11 +1,13 @@
 extends Node2D
 
 var sound_camara: AudioStreamPlayer2D
+var time_elapsed = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#$gato.add_constant_central_force(Vector2(-10,0))
 	#$gato.set_axis_velocity(Vector2(-100,0))
+	time_elapsed = 0
 	sound_camara = $AudioStreamPlayer2D
 	inicializar_animal("gato")
 	inicializar_animal("toro")
@@ -18,6 +20,7 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	time_elapsed += delta
 	var gato_onscreen = get_node("gato")
 	if gato_onscreen != null:
 		var gato_onworld = gato_onscreen.offworld
@@ -37,6 +40,8 @@ func _input(event):
 			
 			await get_tree().create_timer(0.1).timeout
 			if get_node("gato").velocidad == 0:
+				var puntos = (Global.puntos_base / time_elapsed) * Global.nivel
+				Global.puntuacion += puntos
 				get_tree().change_scene_to_file("res://polaroid.tscn")
 			else:
 				get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
