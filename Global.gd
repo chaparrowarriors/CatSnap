@@ -2,6 +2,7 @@ extends Node
 
 var puntuacion = 0
 var puntos_base = 100
+var puntos = 0
 var nivel = 1
 var nivel_final = 6
 var victoria = false

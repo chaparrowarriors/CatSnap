@@ -65,8 +65,8 @@ func _input(event):
 			
 			await get_tree().create_timer(0.1).timeout
 			if Global.gatovelocidad == 0:
-				var puntos = (Global.puntos_base / time_elapsed) * Global.nivel
-				Global.puntuacion += puntos
+				Global.puntos = (Global.puntos_base / time_elapsed) * Global.nivel
+				Global.puntuacion += Global.puntos
 				if Global.nivel == Global.nivel_final:
 					Global.victoria = true
 					get_tree().change_scene_to_file("res://menu/end_screen.tscn")
