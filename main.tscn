@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq865ws3wyf7i"]
+[gd_scene load_steps=7 format=3 uid="uid://cq865ws3wyf7i"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_bku42"]
 [ext_resource type="Texture2D" uid="uid://b6n83ptdywg32" path="res://fondo_temporal.png" id="2_q08pi"]
+[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://background.png" id="3_fdirk"]
+[ext_resource type="Texture2D" uid="uid://bf7f8ufi5ktf5" path="res://main-title.png" id="4_d8v1q"]
+[ext_resource type="Texture2D" uid="uid://kjebrvij8aqh" path="res://start.png" id="5_rmydp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6hky"]
+size = Vector2(570, 190)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_bku42")
@@ -10,3 +16,19 @@ script = ExtResource("1_bku42")
 position = Vector2(635.5, 361)
 scale = Vector2(0.623039, 0.626736)
 texture = ExtResource("2_q08pi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="background" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(635, 357.5)
+scale = Vector2(1, 1.01528)
+texture = ExtResource("3_fdirk")
+
+[node name="title" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(622, 200)
+texture = ExtResource("4_d8v1q")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(336, 449)
+texture_normal = ExtResource("5_rmydp")
+shape = SubResource("RectangleShape2D_u6hky")
