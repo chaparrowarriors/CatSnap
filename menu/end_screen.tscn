@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bctdqkrvuldhp"]
+[gd_scene load_steps=9 format=3 uid="uid://nal10k0gnepr"]
 
 [ext_resource type="Script" path="res://menu/end_screen.gd" id="1_emmhs"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_swxx7"]
@@ -69,6 +69,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="puntos" type="Label" parent="."]
+layout_mode = 0
 offset_left = 415.0
 offset_top = 379.0
 offset_right = 865.0
