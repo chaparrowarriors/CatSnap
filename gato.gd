@@ -1,16 +1,21 @@
 extends RigidBody2D
 
+var velocidad = 100
+var direccion = Vector2(0, 0)
+var random = randi_range(1, 4) # Número aleatorio para cases.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	inicializar_posicion()
+	ini_posicion()
+	ini_velocidad()
+	ini_animacion()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	set_axis_velocity(direccion * velocidad)
 
-func inicializar_posicion():
+func ini_posicion():
 	# Constantes de posición de pantalla x min/max y y min/max
 	var viewport_tam = get_viewport_rect().size
 	var x_max = viewport_tam.x
@@ -21,8 +26,6 @@ func inicializar_posicion():
 	# Randomizamos posicion
 	var pos_x = 0
 	var pos_y = 0
-	var random = randi_range(1, 4) # Número aleatorio para cases.
-	print(random)
 	
 	# Randomizamos posición pero tiene que estar fuera de la pantalla
 
@@ -45,10 +48,9 @@ func inicializar_posicion():
 
 	# Asignamos posición
 	set_position(Vector2(pos_x, pos_y))
-
+	
+func ini_velocidad():
 	# Asignamos velocidad
-	var velocidad = 100
-	var direccion = Vector2(0, 0)
 	if random == 1:
 		direccion = Vector2(0, -1)
 	elif random == 2:
@@ -57,7 +59,16 @@ func inicializar_posicion():
 		direccion = Vector2(1, 0)
 	elif random == 4:
 		direccion = Vector2(-1, 0)
+		
 	set_axis_velocity(direccion * velocidad)
-
-
-	$AnimatedSprite2D.play('idle')
+	
+func ini_animacion():
+		# Asignamos animacion
+	if random == 1:
+		$AnimatedSprite2D.play('izquierda')
+	elif random == 2:
+		$AnimatedSprite2D.play('derecha')
+	elif random == 3:
+		$AnimatedSprite2D.play('derecha')
+	elif random == 4:
+		$AnimatedSprite2D.play('izquierda')
