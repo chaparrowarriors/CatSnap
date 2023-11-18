@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcnx46nlngsur"
-path="res://.godot/imported/fry.png-21c0f84a776f55a12ba1280c378feb23.ctex"
+uid="uid://jvnunucfge37"
+path="res://.godot/imported/raton1.png-e6f1ffe307337f62b73a81e185f02321.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/fry.png"
-dest_files=["res://.godot/imported/fry.png-21c0f84a776f55a12ba1280c378feb23.ctex"]
+source_file="res://assets/raton1.png"
+dest_files=["res://.godot/imported/raton1.png-e6f1ffe307337f62b73a81e185f02321.ctex"]
 
 [params]
 

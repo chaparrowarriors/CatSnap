@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://borjaoyu7d5g0" path="res://menu/LilitaOne-Regular.ttf" id="2_c03g1"]
 [ext_resource type="Texture2D" uid="uid://coxc3itu7nbib" path="res://menu/tablero.png" id="3_xeu4b"]
 [ext_resource type="Texture2D" uid="uid://w1q3m7wxejmm" path="res://menu/post-it.png" id="4_u0iud"]
-[ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://menu/fry.png" id="5_cewjl"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="6_2v1dr"]
+[ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://assets/fry.png" id="6_hcsui"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yodge"]
 texture = ExtResource("3_xeu4b")
@@ -48,13 +48,13 @@ texture = ExtResource("4_u0iud")
 [node name="Fry" type="Sprite2D" parent="."]
 position = Vector2(170, 350)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("5_cewjl")
+texture = ExtResource("6_hcsui")
 flip_h = true
 
 [node name="Fry2" type="Sprite2D" parent="."]
 position = Vector2(1100, 350)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("5_cewjl")
+texture = ExtResource("6_hcsui")
 
 [node name="Puntuacion" type="Label" parent="."]
 layout_mode = 0

@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkcb135r32kcu"]
+[gd_scene load_steps=8 format=3 uid="uid://dkcb135r32kcu"]
 
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_vgv73"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="2_3ccod"]
+[ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://assets/fry.png" id="3_xnm0l"]
 [ext_resource type="Texture2D" uid="uid://bf7f8ufi5ktf5" path="res://menu/main-title.png" id="3_yi1yn"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="4_eg0fd"]
+[ext_resource type="Texture2D" uid="uid://jvnunucfge37" path="res://assets/raton1.png" id="4_ivyvy"]
+[ext_resource type="Texture2D" uid="uid://cfu5mrctu3wg7" path="res://assets/buey1.png" id="7_ddfx0"]
 
 [node name="Menu" type="Control"]
 custom_minimum_size = Vector2(1270, 720)
@@ -21,6 +24,17 @@ script = ExtResource("1_vgv73")
 position = Vector2(635, 357.5)
 scale = Vector2(1, 1.01528)
 texture = ExtResource("2_3ccod")
+
+[node name="Fry" type="Sprite2D" parent="."]
+position = Vector2(389, 606)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_xnm0l")
+
+[node name="rata" type="Sprite2D" parent="."]
+position = Vector2(867, 215)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_ivyvy")
+flip_h = true
 
 [node name="title" type="Sprite2D" parent="."]
 position = Vector2(650, 209)
@@ -44,7 +58,7 @@ theme = ExtResource("4_eg0fd")
 
 [node name="StartBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "START"
+text = "JUGAR"
 
 [node name="HowToPlayBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -53,6 +67,11 @@ text = "COMO JUGAR"
 [node name="QuitBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "QUITAR"
+
+[node name="Buey1" type="Sprite2D" parent="."]
+position = Vector2(1221, 580)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ddfx0")
 
 [connection signal="pressed" from="VBoxContainer/StartBoton" to="." method="_on_start_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlayBoton" to="." method="_on_how_to_play_boton_pressed"]
