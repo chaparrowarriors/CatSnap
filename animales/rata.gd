@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var sound_gato: AudioStreamPlayer2D
+var sound_rata: AudioStreamPlayer2D
 
 var velocidad = 500
 var direccion = Vector2(0, 0)
@@ -9,8 +9,8 @@ var time_elapsed := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sound_gato = $AudioStreamPlayer2D
-	sound_gato.play()
+	sound_rata = $AudioStreamPlayer2D
+	sound_rata.play()
 	
 	ini_posicion()
 	ini_velocidad()
@@ -119,7 +119,7 @@ func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
 			velocidad = 0
-			sound_gato.stop()
+			sound_rata.stop()
 			$AnimatedSprite2D.stop()
 
 # Función que checkea la posición del animal para ver si sigue dentro de pantalla.
@@ -132,8 +132,8 @@ func on_screen():
 
 	# Verifica si la posición del RigidBody está dentro del Viewport
 	if viewport_rect.has_point(position_in_world):
-		if !sound_gato.is_playing() && velocidad > 0:
-			sound_gato.play()
+		if !sound_rata.is_playing() && velocidad > 0:
+			sound_rata.play()
 	else:
-		sound_gato.stop()
+		sound_rata.stop()
 
