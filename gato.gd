@@ -115,6 +115,7 @@ func _on_input_event(viewport, event, shape_idx):
 		if event.is_pressed():
 			velocidad = 0
 			sound_gato.stop()
+			$AnimatedSprite2D.stop()
 
 # Función que checkea la posición del animal para ver si sigue dentro de pantalla.
 func on_screen():
