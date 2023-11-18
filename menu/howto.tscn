@@ -35,11 +35,11 @@ text = "
 
 3. Fry aparecerá desde uno de los lados de la pantalla
 
-4. Para fotografiarlo tienes que clickar sobre el 
+4. Para fotografiarlo tienes que clickar sobre él 
 
 5. Cuanto más rápido seas haciendo la foto más puntos conseguirás
 
-6. Suerte!"
+6. ¡Suerte!"
 
 [node name="Fry" type="Sprite2D" parent="."]
 position = Vector2(210, 562)
@@ -55,23 +55,25 @@ offset_bottom = 592.0
 theme = ExtResource("2_8u7pg")
 text = "<- Este es Fry"
 
-[node name="Button" type="Button" parent="."]
+[node name="Volver" type="Button" parent="."]
 layout_mode = 0
 offset_left = 894.0
 offset_top = 561.0
 offset_right = 1030.0
 offset_bottom = 605.0
 theme = ExtResource("2_8u7pg")
+theme_override_font_sizes/font_size = 25
 text = "Volver"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Jugar" type="Button" parent="."]
 layout_mode = 0
 offset_left = 561.0
 offset_top = 550.0
 offset_right = 712.0
 offset_bottom = 616.0
 theme = ExtResource("2_8u7pg")
+theme_override_font_sizes/font_size = 35
 text = "Jugar"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Volver" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_button_2_pressed"]
