@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk6lcj5o32psv"]
+[gd_scene load_steps=13 format=3 uid="uid://dk6lcj5o32psv"]
 
 [ext_resource type="Texture2D" uid="uid://b6whbcgjt1o5i" path="res://gato_temporal.png" id="1_0cnjb"]
 [ext_resource type="Script" path="res://gato.gd" id="1_ofdsw"]
+[ext_resource type="AudioStream" uid="uid://plg2ekbopfpg" path="res://sonidos/miau.mp3" id="3_66f2i"]
+[ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="4_2d2es"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dkpw"]
 size = Vector2(29, 29)
@@ -72,5 +74,12 @@ shape = SubResource("RectangleShape2D_2dkpw")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jq2iq")
 animation = &"derecha"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_66f2i")
+volume_db = 6.847
+pitch_scale = 0.77
+autoplay = true
+script = ExtResource("4_2d2es")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
