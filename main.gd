@@ -1,6 +1,7 @@
 extends Node2D
 
 var sound_camara: AudioStreamPlayer2D
+var screenshot : Image
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,14 +30,14 @@ func _input(event):
 			var click_position = event.position
 # Capturamos la ventana al hacer click
 	# Obtiene la imagen de la pantalla
-			var screenshot = get_viewport().get_texture().get_image()
+			screenshot = get_viewport().get_texture().get_image()
 
 			# Guarda la imagen como un archivo PNG (puedes ajustar la ruta y el nombre del archivo)
-			var file = FileAccess.open("user://screenshot.png", FileAccess.WRITE)
+			#var file = FileAccess.open("res://screenshot.png", FileAccess.WRITE)
 
-			screenshot.save_png("user://screenshot.png")
+			#screenshot.save_png("res://screenshot.png")
 			
-			file.close()
+			#file.close()
 			#var imagen = get_viewport().get_texture()
 			#var image_data = imagen.get_image()
 			

@@ -4,7 +4,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	#$polaroid/screenshot.texture = preload("user://screenshot.png")
+	#$polaroid/screenshot.texture = load("res://screenshot.png")
+	$polaroid/screenshot.texture = get_node("main").screenshot
 
 	pass
 
