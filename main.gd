@@ -37,10 +37,14 @@ func _input(event):
 			image.create_from_data(imagen.get_width(), imagen.get_height(), false, Image.FORMAT_RGBA8, image_data)
 			
 		# Guardar la imagen como archivo PNG (puedes ajustar la ruta y el nombre del archivo)
-			#var file = File.new()
-			#file.open("user://screenshot.png", File.WRITE)
-			#image.save_png(file)
-			#file.close()
+			#if not FileAccess.file_exists("user://savegame.save"):
+			#	FileAccess.open("user://polaroid.save", FileAccess.WRITE)
+				
+			var file = FileAccess.open("user://polaroid.save", FileAccess.WRITE)
+			
+			#file.open("user://polaroid.save", FileAccess.WRITE)
+			image.save_png(file)
+			file.close()
 			
 			await get_tree().create_timer(0.1).timeout
 			if get_node("gato").velocidad == 0:
