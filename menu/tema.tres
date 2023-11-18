@@ -4,12 +4,14 @@
 [ext_resource type="StyleBox" uid="uid://ttkdtsc5jdkk" path="res://menu/button_style.tres" id="2_b567k"]
 
 [resource]
-Button/colors/font_color = Color(0.929412, 0.588235, 0.352941, 1)
-Button/colors/font_focus_color = Color(0.847798, 0.647127, 0.176875, 1)
-Button/colors/font_hover_color = Color(0.847798, 0.647127, 0.176875, 1)
-Button/colors/font_hover_pressed_color = Color(0.441692, 0.234566, 0.0745476, 1)
+Button/colors/font_color = Color(0.631373, 0.239216, 0.105882, 1)
+Button/colors/font_focus_color = Color(0.631373, 0.239216, 0.105882, 1)
+Button/colors/font_hover_color = Color(0.913344, 0.60045, 0.333428, 1)
+Button/colors/font_hover_pressed_color = Color(0.999273, 0.460053, 0, 1)
+Button/colors/font_pressed_color = Color(0.999273, 0.460053, 0, 1)
 Button/fonts/font = ExtResource("1_tok7o")
 Button/styles/disabled = ExtResource("2_b567k")
 Button/styles/focus = ExtResource("2_b567k")
 Button/styles/hover = ExtResource("2_b567k")
 Button/styles/normal = ExtResource("2_b567k")
+Button/styles/pressed = ExtResource("2_b567k")
