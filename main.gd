@@ -10,15 +10,26 @@ func _ready():
 	inicializar_gato()
 	inicializar_toro()
 	
+	# Conectar la señal del hijo.
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#$gato.set_axis_velocity(Vector2(-100,0))
 	pass
+			
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			sound_camara.play()		
+# Obtén las coordenadas del evento de clic en relación con esta escena
+			var click_position = event.position
+# Capturamos la ventana al hacer click
+			var imagen = get_viewport().get_texture().get_image()
 
-func _on_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		if event.is_pressed():
-			sound_camara.play()
+
+
+# Utiliza get_node_at_position para obtener el nodo en esa posición
+			#var clicked_node = get_node_at_position(click_position)
 				
 func inicializar_gato():
  # Carga la escena que contiene el RigidBody
