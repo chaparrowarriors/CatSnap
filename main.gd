@@ -5,7 +5,16 @@ extends Node2D
 func _ready():
 	#$gato.add_constant_central_force(Vector2(-10,0))
 	#$gato.set_axis_velocity(Vector2(-100,0))
-	pass
+	inicializar_gato()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$gato.set_axis_velocity(Vector2(-100,0))
+	#$gato.set_axis_velocity(Vector2(-100,0))
+	pass
+	
+func inicializar_gato():
+ # Carga la escena que contiene el RigidBody
+	var escena_gato = preload("res://gato.tscn")
+	# Instancia la escena
+	var gato = escena_gato.instantiate()
+
