@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://2ppgdlx0f1ea"]
+[gd_scene load_steps=8 format=3 uid="uid://cbe1tbrmalgpy"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
 [ext_resource type="Texture2D" uid="uid://cydmv0sv7sv0k" path="res://menu/polaroid.png" id="3_lmtwe"]
 [ext_resource type="FontFile" uid="uid://borjaoyu7d5g0" path="res://menu/LilitaOne-Regular.ttf" id="4_gd2lo"]
 [ext_resource type="Texture2D" uid="uid://coxc3itu7nbib" path="res://menu/tablero.png" id="5_wjnwo"]
+[ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="6_8oh5s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftrbp"]
 texture = ExtResource("5_wjnwo")
@@ -48,3 +49,37 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ftrbp")
 text = "¡Buena foto!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="puntuacion_text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 556.0
+offset_right = 665.0
+offset_bottom = 594.0
+rotation = -0.136765
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "Puntuación: 
+"
+
+[node name="puntuacion_value" type="Label" parent="."]
+offset_left = 679.0
+offset_top = 531.0
+offset_right = 719.0
+offset_bottom = 569.0
+rotation = -0.136765
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1027.0
+offset_top = 628.0
+offset_right = 1227.0
+offset_bottom = 678.0
+theme = ExtResource("6_8oh5s")
+text = "Continuar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

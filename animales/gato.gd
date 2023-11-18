@@ -10,7 +10,8 @@ var onworld = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.gatovelocidad = 200
+	if Global.gatovelocidad == 0:
+		Global.gatovelocidad = Global.gatovelocidadbase
 	sound_gato = $AudioStreamPlayer2D
 	sound_gato.play()
 	
