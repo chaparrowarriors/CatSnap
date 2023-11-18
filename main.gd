@@ -1,7 +1,6 @@
 extends Node2D
 
 var sound_camara: AudioStreamPlayer2D
-var screenshot : Image
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,30 +29,8 @@ func _input(event):
 			var click_position = event.position
 # Capturamos la ventana al hacer click
 	# Obtiene la imagen de la pantalla
-			screenshot = get_viewport().get_texture().get_image()
+			Global.screenshot = get_viewport().get_texture().get_image()
 
-			# Guarda la imagen como un archivo PNG (puedes ajustar la ruta y el nombre del archivo)
-			#var file = FileAccess.open("res://screenshot.png", FileAccess.WRITE)
-
-			#screenshot.save_png("res://screenshot.png")
-			
-			#file.close()
-			#var imagen = get_viewport().get_texture()
-			#var image_data = imagen.get_image()
-			
-			#var image = Image.new()
-			
-			#image.create_from_data(imagen.get_width(), imagen.get_height(), false, Image.FORMAT_RGBA8, image_data)
-			
-		# Guardar la imagen como archivo PNG (puedes ajustar la ruta y el nombre del archivo)
-			#if not FileAccess.file_exists("user://savegame.save"):
-			#	FileAccess.open("user://polaroid.save", FileAccess.WRITE)
-				
-			#var file = FileAccess.open("user://polaroid.save", FileAccess.WRITE)
-			
-			#file.open("user://polaroid.save", FileAccess.WRITE)
-			#image_data.save_png(file)
-			#file.close()
 			
 			await get_tree().create_timer(0.1).timeout
 			if get_node("gato").velocidad == 0:

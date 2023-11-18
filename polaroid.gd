@@ -5,7 +5,7 @@ extends Control
 func _ready():
 	
 	#$polaroid/screenshot.texture = load("res://screenshot.png")
-	$polaroid/screenshot.texture = get_node("main").screenshot
+	$polaroid/screenshot.texture = Global.screenshot
 
 	pass
 
