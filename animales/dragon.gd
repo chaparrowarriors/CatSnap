@@ -1,28 +1,39 @@
 extends RigidBody2D
 
-var velocidad = 100
-var direccion = Vector2(0, 0)
-var random = randi_range(1, 4) # Número aleatorio para cases.
+var velocidad = 10
+var direction = 1
+#var random = randi_range(1, 4) # Número aleatorio para cases.
+var random = 1 # Número aleatorio para cases.
 var time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ini_posicion()
-	ini_velocidad()
 	ini_animacion()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	time += delta
-	var freq = 5
-	var amplitude = 150
 	
-	var v = Vector2(0, 25)
+	if direction < 0:
+		$AnimatedSprite2D.play('izquierda')
+	else:
+		$AnimatedSprite2D.play('derecha')
+	
+	var position_in_world = global_position
+	var viewport_rect = get_viewport_rect()
+	if time > 1 && !viewport_rect.has_point(position_in_world):
+		direction = -1
+	
+	var freq = 5
+	var amplitude = 50
+	
+	var v = Vector2(10, 1)
 
-	v.x = sin(time * freq) * amplitude
-	set_axis_velocity(v * velocidad)
+	v.y = sin(time * freq) * amplitude
+	v.x = v.x * direction
+	set_axis_velocity(v*velocidad)
 
 func ini_posicion():
 	# Constantes de posición de pantalla x min/max y y min/max
@@ -39,35 +50,11 @@ func ini_posicion():
 	# Randomizamos posición pero tiene que estar fuera de la pantalla
 
 	if random == 1:
-		pos_x = x_min - 50
-		pos_y = y_min - 50
-	# Case 6: Esquina inferior izquierda
-	elif random == 2:
-		pos_x = x_min - 50
-		pos_y = y_max + 50
-	# Case 7: Esquina superior derecha
-	elif random == 3:
-		pos_x = x_max + 50
-		pos_y = y_min - 50
-	# Case 8: Esquina inferior derecha
-	elif random == 4:
-		pos_x = x_max + 50
-		pos_y = y_max + 50
+		pos_x = x_min
+		pos_y = y_max / 4
 
 	# Asignamos posición
 	set_position(Vector2(pos_x, pos_y))
-	
-func ini_velocidad():
-	if random == 1:
-		direccion = Vector2(1, 1)
-	elif random == 2:
-		direccion = Vector2(1, -1)
-	elif random == 3:
-		direccion = Vector2(-1, 1)
-	elif random == 4:
-		direccion = Vector2(-1, -1)
-		
-	set_axis_velocity(direccion * velocidad)
 	
 func ini_animacion():
 		# Asignamos animacion

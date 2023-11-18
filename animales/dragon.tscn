@@ -46,10 +46,11 @@ animations = [{
 }]
 
 [node name="RigidBody2D" type="RigidBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_ebhhk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_ndrhe")
 animation = &"derecha"
 frame = 1
