@@ -9,13 +9,20 @@ func _ready():
 	#$gato.set_axis_velocity(Vector2(-100,0))
 	time_elapsed = 0
 	sound_camara = $AudioStreamPlayer2D
-	inicializar_animal("gato")
-	inicializar_animal("toro")
-	inicializar_animal("rata")
-	inicializar_animal("rata")
-	inicializar_animal("rata")
-	inicializar_animal("tigre")
-	
+	### CAMBIAR CANCIONES CON EL PASO DE NIVEL
+	match Global.nivel:
+		1:
+			nivel1()
+		2:
+			nivel2()
+		3:
+			nivel3()
+		4:
+			nivel4()
+		5:
+			nivel5()
+		6:
+			nivel6()
 	# Conectar la señal del hijo.
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,7 +52,7 @@ func _input(event):
 			Global.screenshot.crop(365, 365)
 			
 			await get_tree().create_timer(0.1).timeout
-			if get_node("gato").velocidad == 0:
+			if Global.gatovelocidad == 0:
 				var puntos = (Global.puntos_base / time_elapsed) * Global.nivel
 				Global.puntuacion += puntos
 				get_tree().change_scene_to_file("res://polaroid.tscn")
@@ -57,3 +64,29 @@ func inicializar_animal(animal):
 	var escena = load(path)
 	var instancia = escena.instantiate()
 	add_child(instancia)
+
+# Niveles
+func nivel1():
+	inicializar_animal("gato")
+	
+func nivel2():
+	nivel1()
+	inicializar_animal("toro")
+
+func nivel3():
+	nivel2()
+	inicializar_animal("rata")
+	inicializar_animal("rata")
+	inicializar_animal("rata")
+		
+func nivel4():
+	nivel3()
+	inicializar_animal("conejo")
+		
+func nivel5():
+	nivel4()
+	inicializar_animal("tigre")
+		
+func nivel6():
+	nivel5()
+	inicializar_animal("dragon")
