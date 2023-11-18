@@ -30,10 +30,6 @@ func _input(event):
 			sound_camara.play()		
 # Obtén las coordenadas del evento de clic en relación con esta escena
 			var click_position = event.position
-# Capturamos la ventana al hacer click
-	# Obtiene la imagen de la pantalla
-			Global.screenshot = get_viewport().get_texture().get_image()
-
 			
 			await get_tree().create_timer(0.1).timeout
 			if get_node("gato").velocidad == 0:
