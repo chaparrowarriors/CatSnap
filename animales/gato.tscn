@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dk6lcj5o32psv"]
+[gd_scene load_steps=14 format=3 uid="uid://chd2pd8n77lji"]
 
-[ext_resource type="Script" path="res://animales/gato.gd" id="1_ofdsw"]
+[ext_resource type="Script" path="res://animales/gato.gd" id="1_uyf0p"]
 [ext_resource type="Texture2D" uid="uid://cnx4tjmoyptxu" path="res://assets/gato2.png" id="2_dn271"]
 [ext_resource type="Texture2D" uid="uid://ey3tmbvhjixp" path="res://assets/gato.png" id="2_ra2eb"]
-[ext_resource type="AudioStream" uid="uid://plg2ekbopfpg" path="res://sonidos/miau.mp3" id="3_66f2i"]
-[ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="4_2d2es"]
+[ext_resource type="AudioStream" uid="uid://plg2ekbopfpg" path="res://sonidos/miau.mp3" id="4_0cqsp"]
+[ext_resource type="Script" path="res://sonidos/AudioStreamPlayer2D.gd" id="5_lstt3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dkpw"]
 size = Vector2(47, 49)
@@ -66,7 +66,7 @@ animations = [{
 
 [node name="gato" type="RigidBody2D"]
 input_pickable = true
-script = ExtResource("1_ofdsw")
+script = ExtResource("1_uyf0p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -79,10 +79,10 @@ sprite_frames = SubResource("SpriteFrames_jq2iq")
 animation = &"derecha"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_66f2i")
+stream = ExtResource("4_0cqsp")
 volume_db = 6.847
 pitch_scale = 0.77
 autoplay = true
-script = ExtResource("4_2d2es")
+script = ExtResource("5_lstt3")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
