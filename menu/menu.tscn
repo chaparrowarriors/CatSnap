@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkcb135r32kcu"]
+[gd_scene load_steps=5 format=3 uid="uid://dkcb135r32kcu"]
 
-[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://background.png" id="1_01tg4"]
-[ext_resource type="Script" path="res://menu.gd" id="1_aya4u"]
-[ext_resource type="Texture2D" uid="uid://bf7f8ufi5ktf5" path="res://main-title.png" id="2_mmu5t"]
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_vgv73"]
+[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="2_3ccod"]
+[ext_resource type="Texture2D" uid="uid://bf7f8ufi5ktf5" path="res://menu/main-title.png" id="3_yi1yn"]
+[ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="4_eg0fd"]
 
 [node name="Menu" type="Control"]
 custom_minimum_size = Vector2(1270, 720)
@@ -14,16 +15,16 @@ offset_left = -635.0
 offset_right = 635.0
 offset_bottom = 720.0
 grow_horizontal = 2
-script = ExtResource("1_aya4u")
+script = ExtResource("1_vgv73")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(635, 357.5)
 scale = Vector2(1, 1.01528)
-texture = ExtResource("1_01tg4")
+texture = ExtResource("2_3ccod")
 
 [node name="title" type="Sprite2D" parent="."]
-position = Vector2(650, 180)
-texture = ExtResource("2_mmu5t")
+position = Vector2(650, 209)
+texture = ExtResource("3_yi1yn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -32,13 +33,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -166.0
-offset_top = 10.0
-offset_right = -54.0
-offset_bottom = 111.0
+offset_left = -199.0
+offset_top = 80.0
+offset_right = -56.0
+offset_bottom = 145.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
+theme = ExtResource("4_eg0fd")
 
 [node name="StartBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

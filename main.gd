@@ -15,7 +15,7 @@ func _process(delta):
 	
 func inicializar_gato():
  # Carga la escena que contiene el RigidBody
-	var escena_gato = preload("res://gato.tscn")
+	var escena_gato = preload("res://animales/gato.tscn")
 	# Instancia la escena
 	var gato = escena_gato.instantiate()
 	# Agrega el RigidBody al nodo actual
@@ -24,7 +24,7 @@ func inicializar_gato():
 
 func inicializar_toro():
  # Carga la escena que contiene el RigidBody
-	var escena_toro = preload("res://toro.tscn")
+	var escena_toro = preload("res://animales/toro.tscn")
 	# Instancia la escena
 	var toro = escena_toro.instantiate()
 	# Agrega el RigidBody al nodo actual

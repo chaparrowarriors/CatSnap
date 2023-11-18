@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf7f8ufi5ktf5"
-path="res://.godot/imported/main-title.png-742008d94d1e49000434a453044f2186.ctex"
+uid="uid://8mq7g160ihy3"
+path="res://.godot/imported/toro.png-cc622f2203857d35599d2d8fd11ce2f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main-title.png"
-dest_files=["res://.godot/imported/main-title.png-742008d94d1e49000434a453044f2186.ctex"]
+source_file="res://animales/toro.png"
+dest_files=["res://.godot/imported/toro.png-cc622f2203857d35599d2d8fd11ce2f9.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dk6lcj5o32psv"]
 
-[ext_resource type="Script" path="res://gato.gd" id="1_ofdsw"]
+[ext_resource type="Script" path="res://animales/gato.gd" id="1_ofdsw"]
 [ext_resource type="Texture2D" uid="uid://cnx4tjmoyptxu" path="res://assets/gato2.png" id="2_dn271"]
 [ext_resource type="Texture2D" uid="uid://ey3tmbvhjixp" path="res://assets/gato.png" id="2_ra2eb"]
 [ext_resource type="AudioStream" uid="uid://plg2ekbopfpg" path="res://sonidos/miau.mp3" id="3_66f2i"]
