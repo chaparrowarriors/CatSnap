@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Puntuacion.text = str(Global.puntuacion)
+	$Puntuacion.text = str(Global.puntuacion).pad_decimals(2)
 	
 
 
@@ -21,4 +21,6 @@ func _on_menu_pressed():
 
 
 func _on_jugar_pressed():
+	Global.nivel = 1
+	Global.gatovelocidad = Global.gatovelocidadbase
 	get_tree().change_scene_to_file("res://main.tscn")
