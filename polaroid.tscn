@@ -30,9 +30,7 @@ texture = ExtResource("3_lmtwe")
 
 [node name="screenshot" type="Sprite2D" parent="polaroid"]
 show_behind_parent = true
-position = Vector2(8.56812, 0.804657)
-scale = Vector2(0.620555, 0.601138)
-texture = ExtResource("4_sh58v")
+texture = SubResource("ImageTexture_cvvfo")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

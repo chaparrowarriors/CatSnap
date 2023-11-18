@@ -30,14 +30,22 @@ func _input(event):
 			sound_camara.play()		
 # Obtén las coordenadas del evento de clic en relación con esta escena
 			var click_position = event.position
+# Capturamos la ventana al hacer click
+	# Obtiene la imagen de la pantalla
+			var screenshotTemp = get_viewport().get_texture().get_image()
+
+			# get_viewport rectangle 100x100 centered on the mouse position
+			var rect = Rect2i(click_position.x - 182, click_position.y - 182, 365, 365)
+			# Crop the image to the rectangle using blip_rect
+			Global.screenshot = screenshotTemp
+			Global.screenshot.blit_rect(screenshotTemp, rect, Vector2(0, 0))
+			Global.screenshot.crop(365, 365)
 			
 			await get_tree().create_timer(0.1).timeout
 			if get_node("gato").velocidad == 0:
 				get_tree().change_scene_to_file("res://polaroid.tscn")
 			else:
 				get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
-				
-			
 
 func inicializar_animal(animal):
 	var path = "res://animales/"+animal+".tscn"
