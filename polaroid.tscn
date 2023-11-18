@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://2n61itm2gshs"]
+[gd_scene load_steps=8 format=3 uid="uid://2n61itm2gshs"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
 [ext_resource type="Texture2D" uid="uid://cydmv0sv7sv0k" path="res://menu/polaroid.png" id="3_lmtwe"]
+[ext_resource type="Texture2D" uid="uid://6pxkof84sw67" path="res://menu/screenshot.png" id="4_eykvk"]
 [ext_resource type="FontFile" uid="uid://borjaoyu7d5g0" path="res://menu/LilitaOne-Regular.ttf" id="4_gd2lo"]
 [ext_resource type="Texture2D" uid="uid://coxc3itu7nbib" path="res://menu/tablero.png" id="5_wjnwo"]
 
@@ -26,6 +27,11 @@ texture = ExtResource("1_ptxil")
 position = Vector2(660, 404)
 rotation = -0.120428
 texture = ExtResource("3_lmtwe")
+
+[node name="screenshot" type="Sprite2D" parent="polaroid"]
+show_behind_parent = true
+scale = Vector2(1, 1)
+texture = ExtResource("4_eykvk")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

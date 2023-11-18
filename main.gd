@@ -9,6 +9,7 @@ func _ready():
 	sound_camara = $AudioStreamPlayer2D
 	inicializar_gato()
 	inicializar_toro()
+	inicializar_rata()
 	
 	# Conectar la señal del hijo.
 	
@@ -58,3 +59,10 @@ func inicializar_toro():
 	# Agrega el RigidBody al nodo actual
 	add_child(toro)
 
+func inicializar_rata():
+ # Carga la escena que contiene el RigidBody
+	var escena_rata = preload("res://animales/rata.tscn")
+	# Instancia la escena
+	var rata = escena_rata.instantiate()
+	# Agrega el RigidBody al nodo actual
+	add_child(rata)

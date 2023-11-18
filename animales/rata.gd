@@ -2,11 +2,10 @@ extends RigidBody2D
 
 var sound_gato: AudioStreamPlayer2D
 
-var velocidad = 500
+var velocidad = 700
 var direccion = Vector2(0, 0)
 var random = randi_range(1, 8) # Número aleatorio para cases.
-var offworld = false
-var onworld = false
+var time_elapsed := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +19,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_linear_velocity(direccion * velocidad)
+	time_elapsed += delta
+	print(time_elapsed)
+	if(randi_range(1, 8) == 3):
+		random = randi_range(1, 8)
+	ini_velocidad()
 	on_screen()
 
 func ini_posicion():
@@ -131,9 +134,6 @@ func on_screen():
 	if viewport_rect.has_point(position_in_world):
 		if !sound_gato.is_playing() && velocidad > 0:
 			sound_gato.play()
-			onworld = true
 	else:
 		sound_gato.stop()
-		if onworld != false:
-			offworld = true
 
