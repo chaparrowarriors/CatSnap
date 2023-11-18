@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfu5mrctu3wg7"
-path="res://.godot/imported/buey1.png-7bf552c9abad73c519d0dc5fc5e9c3d0.ctex"
+uid="uid://jvnunucfge37"
+path="res://.godot/imported/raton_portada.png-cb18416f43f497643eafb2548739b5e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buey1.png"
-dest_files=["res://.godot/imported/buey1.png-7bf552c9abad73c519d0dc5fc5e9c3d0.ctex"]
+source_file="res://assets/raton_portada.png"
+dest_files=["res://.godot/imported/raton_portada.png-cb18416f43f497643eafb2548739b5e0.ctex"]
 
 [params]
 

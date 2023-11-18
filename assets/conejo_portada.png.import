@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jvnunucfge37"
-path="res://.godot/imported/raton1.png-e6f1ffe307337f62b73a81e185f02321.ctex"
+uid="uid://enwi6gsolb75"
+path="res://.godot/imported/conejo_portada.png-8a1110495420653e28458bc84e9321da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/raton1.png"
-dest_files=["res://.godot/imported/raton1.png-e6f1ffe307337f62b73a81e185f02321.ctex"]
+source_file="res://assets/conejo_portada.png"
+dest_files=["res://.godot/imported/conejo_portada.png-8a1110495420653e28458bc84e9321da.ctex"]
 
 [params]
 

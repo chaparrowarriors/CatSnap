@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xgnlk3d2l1px"
-path="res://.godot/imported/toro (1).png-4397921f94fffff8730a4d57b6291d10.ctex"
+uid="uid://c1y4b1dbb5v2a"
+path="res://.godot/imported/secuenciadragon.png-a617b74415d368a2375fc6c6ac7d7f36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animales/toro (1).png"
-dest_files=["res://.godot/imported/toro (1).png-4397921f94fffff8730a4d57b6291d10.ctex"]
+source_file="res://assets/secuenciadragon.png"
+dest_files=["res://.godot/imported/secuenciadragon.png-a617b74415d368a2375fc6c6ac7d7f36.ctex"]
 
 [params]
 
