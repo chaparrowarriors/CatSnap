@@ -17,4 +17,7 @@ func inicializar_gato():
 	var escena_gato = preload("res://gato.tscn")
 	# Instancia la escena
 	var gato = escena_gato.instantiate()
+	# Agrega el RigidBody al nodo actual
+	add_child(gato)
+	
 
