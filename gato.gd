@@ -4,7 +4,7 @@ var sound_gato: AudioStreamPlayer2D
 
 var velocidad = 100
 var direccion = Vector2(0, 0)
-var random = randi_range(1, 4) # Número aleatorio para cases.
+var random = randi_range(1, 8) # Número aleatorio para cases.
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,7 +51,22 @@ func ini_posicion():
 	elif random == 4:
 		pos_x = x_max + 50
 		pos_y = randf_range(y_min, y_max)
-
+	# Case 5: Esquina superior Izquierda
+	elif random == 5:
+		pos_x = x_min - 50
+		pos_y = y_min - 50
+	# Case 6: Esquina inferior izquierda
+	elif random == 6:
+		pos_x = x_min - 50
+		pos_y = y_max + 50
+	# Case 7: Esquina superior derecha
+	elif random == 7:
+		pos_x = x_max + 50
+		pos_y = y_min - 50
+	# Case 8: Esquina inferior derecha
+	elif random == 8:
+		pos_x = x_max + 50
+		pos_y = y_max + 50
 	# Asignamos posición
 	set_position(Vector2(pos_x, pos_y))
 	
@@ -65,6 +80,14 @@ func ini_velocidad():
 		direccion = Vector2(1, 0)
 	elif random == 4:
 		direccion = Vector2(-1, 0)
+	elif random == 5:
+		direccion = Vector2(1, 1)
+	elif random == 6:
+		direccion = Vector2(1, -1)
+	elif random == 7:
+		direccion = Vector2(-1, 1)
+	elif random == 8:
+		direccion = Vector2(-1, -1)
 		
 	set_linear_velocity(direccion * velocidad)
 	
@@ -77,6 +100,14 @@ func ini_animacion():
 	elif random == 3:
 		$AnimatedSprite2D.play('derecha')
 	elif random == 4:
+		$AnimatedSprite2D.play('izquierda')
+	elif random == 5:
+		$AnimatedSprite2D.play('derecha')
+	elif random == 6:
+		$AnimatedSprite2D.play('derecha')
+	elif random == 7:
+		$AnimatedSprite2D.play('izquierda')
+	elif random == 8:
 		$AnimatedSprite2D.play('izquierda')
 
 func _on_input_event(viewport, event, shape_idx):
@@ -95,7 +126,7 @@ func on_screen():
 
 	# Verifica si la posición del RigidBody está dentro del Viewport
 	if viewport_rect.has_point(position_in_world):
-		if !sound_gato.is_playing():
+		if !sound_gato.is_playing() && velocidad > 0:
 			sound_gato.play()
 	else:
 		sound_gato.stop()
