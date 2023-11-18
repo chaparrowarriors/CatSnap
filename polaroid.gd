@@ -4,9 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	#$polaroid/screenshot.texture = load("res://screenshot.png")
-	$polaroid/screenshot.texture = Global.screenshot
-
+	$polaroid/screenshot.texture = ImageTexture.create_from_image(Global.screenshot)
 
 	pass
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6whbcgjt1o5i"
-path="res://.godot/imported/gato_temporal.png-446e7331618a4bc1647eafa8e5dfeebc.ctex"
+uid="uid://b1vxy02mqfaiy"
+path="res://.godot/imported/secuenciabuey_izquierda.png-d0efcc208b6f2284aa2b1f60ef48acf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animales/gato_temporal.png"
-dest_files=["res://.godot/imported/gato_temporal.png-446e7331618a4bc1647eafa8e5dfeebc.ctex"]
+source_file="res://assets/secuenciabuey_izquierda.png"
+dest_files=["res://.godot/imported/secuenciabuey_izquierda.png-d0efcc208b6f2284aa2b1f60ef48acf9.ctex"]
 
 [params]
 

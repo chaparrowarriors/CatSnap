@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv4i8febtrg6n"
-path="res://.godot/imported/screenshot.png-024a21af5d37bf0f0dd0e2bccdd149d0.ctex"
+uid="uid://bqagh76ktc0kb"
+path="res://.godot/imported/secuenciabuey_derecha.png-89a0550c48a629428af8a18a72362ee4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screenshot.png"
-dest_files=["res://.godot/imported/screenshot.png-024a21af5d37bf0f0dd0e2bccdd149d0.ctex"]
+source_file="res://assets/secuenciabuey_derecha.png"
+dest_files=["res://.godot/imported/secuenciabuey_derecha.png-89a0550c48a629428af8a18a72362ee4.ctex"]
 
 [params]
 
