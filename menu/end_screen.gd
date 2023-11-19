@@ -26,8 +26,10 @@ func _on_salir_pressed():
 
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file("res://creditos")
-	#get_tree().change_scene_to_file("res://menu/menu.tscn")
+	if Global.victoria:
+		get_tree().change_scene_to_file("res://creditos.tscn")
+	else:
+		get_tree().change_scene_to_file("res://menu/menu.tscn")
 
 
 func _on_jugar_pressed():
