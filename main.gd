@@ -92,29 +92,41 @@ func inicializar_animal(animal):
 
 # Niveles
 func nivel1():
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("gato")
 	
 func nivel2():
 	nivel1()
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("toro")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("toro")
 
 func nivel3():
 	nivel2()
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("rata")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("rata")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("rata")
 		
 func nivel4():
 	nivel3()
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("conejo")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("conejo")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("conejo")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("conejo")
 		
 func nivel5():
 	nivel4()
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("tigre")
+	await get_tree().create_timer(randf_range(0,1)).timeout
 	inicializar_animal("tigre")
 		
 func nivel6():
