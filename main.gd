@@ -107,7 +107,10 @@ func nivel3():
 		
 func nivel4():
 	nivel3()
-	#inicializar_animal("conejo")
+	inicializar_animal("conejo")
+	inicializar_animal("conejo")
+	inicializar_animal("conejo")
+	inicializar_animal("conejo")
 		
 func nivel5():
 	nivel4()
