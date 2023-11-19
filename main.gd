@@ -49,29 +49,23 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			#sound_camara.play()
-# Obtén las coordenadas del evento de clic en relación con esta escena
 			var click_position = event.position
-# Capturamos la ventana al hacer click
-	# Obtiene la imagen de la pantalla
 			var screenshotTemp = get_viewport().get_texture().get_image()
 			var viewport_tam = get_viewport_rect().size
 			var x_max = viewport_tam.x
 			var y_max = viewport_tam.y
 
-			# get_viewport rectangle 100x100 centered on the mouse position
 			var pos_x = click_position.x - 182
 			var pos_y = click_position.y - 182
 			if pos_x < 0:
 				pos_x = 0
-			if pos_x > x_max:
-				pos_x = x_max
+			if pos_x+365 > x_max:
+				pos_x = x_max-365
 			if pos_y < 0:
 				pos_y = 0
-			if pos_y > y_max:
-				pos_y = y_max
+			if pos_y+365 > y_max:
+				pos_y = y_max-365
 			var rect = Rect2i(pos_x, pos_y, 365, 365)
-			# Crop the image to the rectangle using blip_rect
 			Global.screenshot = screenshotTemp
 			Global.screenshot.blit_rect(screenshotTemp, rect, Vector2(0, 0))
 			Global.screenshot.crop(365, 365)
