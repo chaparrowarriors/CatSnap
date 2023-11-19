@@ -49,7 +49,7 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			sound_camara.play()		
+			#sound_camara.play()
 # Obtén las coordenadas del evento de clic en relación con esta escena
 			var click_position = event.position
 # Capturamos la ventana al hacer click
@@ -88,6 +88,7 @@ func nivel1():
 func nivel2():
 	nivel1()
 	inicializar_animal("toro")
+	inicializar_animal("toro")
 
 func nivel3():
 	nivel2()
@@ -97,10 +98,11 @@ func nivel3():
 		
 func nivel4():
 	nivel3()
-	inicializar_animal("conejo")
+	#inicializar_animal("conejo")
 		
 func nivel5():
 	nivel4()
+	inicializar_animal("tigre")
 	inicializar_animal("tigre")
 		
 func nivel6():

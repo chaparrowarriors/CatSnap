@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbe1tbrmalgpy"]
+[gd_scene load_steps=10 format=3 uid="uid://2ppgdlx0f1ea"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://coxc3itu7nbib" path="res://menu/tablero.png" id="5_wjnwo"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="6_8oh5s"]
 [ext_resource type="AudioStream" uid="uid://c8rgp0cakq4yt" path="res://sonidos/Victoria.mp3" id="7_xj5mp"]
+[ext_resource type="AudioStream" uid="uid://c2vuyni618sr3" path="res://sonidos/camara.mp3" id="8_3m58m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftrbp"]
 texture = ExtResource("5_wjnwo")
@@ -86,6 +87,10 @@ text = "Continuar"
 
 [node name="musica_victoria" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_xj5mp")
+autoplay = true
+
+[node name="sonido_camara" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3m58m")
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

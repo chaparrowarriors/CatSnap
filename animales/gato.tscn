@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://sonidos/AudioStreamPlayer2D.gd" id="5_lstt3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dkpw"]
-size = Vector2(47, 49)
+size = Vector2(65, 53)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2fsbh"]
 atlas = ExtResource("2_dn271")
@@ -69,12 +69,12 @@ input_pickable = true
 script = ExtResource("1_uyf0p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(3.5, -1.5)
 shape = SubResource("RectangleShape2D_2dkpw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, 3)
-scale = Vector2(0.0921547, 0.0951562)
+position = Vector2(1, 2)
+scale = Vector2(0.131898, 0.121914)
 sprite_frames = SubResource("SpriteFrames_jq2iq")
 animation = &"derecha"
 
