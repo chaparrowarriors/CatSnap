@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://flvj551pmc2o"]
+
+[ext_resource type="Script" path="res://creditos.gd" id="1_i3wpv"]
+[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_mfjv8"]
+[ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="2_1ofgi"]
+[ext_resource type="Texture2D" uid="uid://whuosm5hojpg" path="res://assets/logo original.png" id="4_vyngn"]
+[ext_resource type="Texture2D" uid="uid://bcnx46nlngsur" path="res://assets/fry.png" id="5_lfp2w"]
+[ext_resource type="Texture2D" uid="uid://cfu5mrctu3wg7" path="res://assets/buey_portada.png" id="6_4pq8e"]
+[ext_resource type="Texture2D" uid="uid://jvnunucfge37" path="res://assets/raton_portada.png" id="7_8y1ui"]
+[ext_resource type="Texture2D" uid="uid://enwi6gsolb75" path="res://assets/conejo_portada.png" id="8_0sk7u"]
+[ext_resource type="Texture2D" uid="uid://bxkm1d8rrsmct" path="res://assets/tigre_portada.png" id="9_j6mmp"]
+[ext_resource type="Texture2D" uid="uid://3br1r8qqn7ia" path="res://assets/dragon_portada.png" id="10_rk3dw"]
+[ext_resource type="AudioStream" uid="uid://d4k7j8mptxg3h" path="res://sonidos/Creditos.mp3" id="11_w0mm4"]
+
+[node name="creditos" type="Node2D"]
+script = ExtResource("1_i3wpv")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(644.5, 357.5)
+scale = Vector2(1.01496, 1.01528)
+texture = ExtResource("1_mfjv8")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="creditos_texto" type="RichTextLabel" parent="RigidBody2D"]
+offset_left = 9.0
+offset_top = 728.0
+offset_right = 1279.0
+offset_bottom = 1448.0
+theme = ExtResource("2_1ofgi")
+bbcode_enabled = true
+text = "
+[center][font_size=40]Los Fieras responsables de esta barbarie:[/font_size]
+
+[font_size=30]
+Música por Carlos Borrás Puche
+Arte por Susana Morales Castilla
+
+Programación por:
+
+Cristian Garrido García
+José Cristóbal López Zafra
+Miguel Ángel Cano Mesa
+Raúl Álvarez Hinojosa
+
+¡Muchas gracias por probar el primer proyecto de [i][b]Chaparro Warriors[/b][/i] !"
+
+[node name="logo_chaparro" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(636, 1689)
+scale = Vector2(0.359512, 0.378351)
+texture = ExtResource("4_vyngn")
+
+[node name="gato" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(281, 1069)
+scale = Vector2(0.24575, 0.261875)
+texture = ExtResource("5_lfp2w")
+flip_h = true
+
+[node name="toro" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1173, 882)
+scale = Vector2(0.235, 0.2575)
+texture = ExtResource("6_4pq8e")
+
+[node name="rata" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1000, 1103)
+scale = Vector2(0.219, 0.2375)
+texture = ExtResource("7_8y1ui")
+
+[node name="conejo" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(143, 854)
+scale = Vector2(0.289, 0.325)
+texture = ExtResource("8_0sk7u")
+flip_h = true
+
+[node name="tigre" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(1118, 1383)
+scale = Vector2(0.4965, 0.55375)
+texture = ExtResource("9_j6mmp")
+
+[node name="dragon" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(245, 1378)
+scale = Vector2(0.428, 0.43625)
+texture = ExtResource("10_rk3dw")
+flip_h = true
+
+[node name="creditos_sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_w0mm4")
+autoplay = true

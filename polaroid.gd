@@ -22,6 +22,6 @@ func _process(delta):
 
 func _on_button_pressed():
 	Global.nivel += 1
-	Global.velocidadactual = Global.velocidadactual + Global.nivel * 10
+	Global.velocidadactual = Global.velocidadactual + Global.nivel * 35
 	get_tree().change_scene_to_file("res://main.tscn")
 	pass # Replace with function body.

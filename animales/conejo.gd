@@ -7,15 +7,13 @@ var direccion = Vector2(0, 0)
 var random = randi_range(3, 4) # Número aleatorio para cases.
 var offworld = false
 var onworld = false
-var speed = 200
+var speed = 500
 var jump_force = 500
-var gravity = 800
 var velocity = Vector2()
 var time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.gatovelocidad = 200
 	sound_conejo = $AudioStreamPlayer2D
 	sound_conejo.play()
 	
@@ -29,16 +27,18 @@ func _process(delta):
 	var smooth = snapped(time, 1)
 	
 	if random == 3:
-		velocity.x += 5
+		velocity.x += 500
 	else:
-		velocity.x -= 5
+		velocity.x -= 500
 
 	# Jumping
 	if smooth % 2:
 		velocity.y = -jump_force
+	else:
+		velocity.y += jump_force
 
 	# Gravity
-	velocity.y += gravity * delta
+	
 
 	# Normalize the velocity to ensure consistent movement speed in all directions
 	velocity = velocity.normalized()
@@ -71,11 +71,11 @@ func ini_posicion():
 	# Case 3: Izquierda
 	elif random == 3:
 		pos_x = x_min - 50
-		pos_y = randf_range( y_max*2/4, y_max)
+		pos_y = randf_range( y_max/4, y_max*3/4)
 	# Case 4: Derecha
 	elif random == 4:
 		pos_x = x_max + 50
-		pos_y = randf_range( y_max*2/4, y_max)
+		pos_y = randf_range( y_max/4, y_max*3/4)
 	# Asignamos posición
 	set_position(Vector2(pos_x, pos_y))
 	

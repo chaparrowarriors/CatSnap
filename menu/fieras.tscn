@@ -20,6 +20,7 @@ position = Vector2(634, 358)
 texture = ExtResource("2_7u2mq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_right = 1270.0
 offset_bottom = 720.0
 theme = ExtResource("2_0vgd2")
@@ -34,13 +35,14 @@ Arte por Susana Morales Castilla
 Programación por:
 
 Cristian Garrido García
-José Cristobal López Zafra
+José Cristóbal López Zafra
 Miguel Ángel Cano Mesa
 Raúl Álvarez Hinojosa
 
 ¡Muchas gracias por probar el primer proyecto de [i][b]Chaparro Warriors[/b][/i] !"
 
 [node name="Volver" type="Button" parent="."]
+layout_mode = 0
 offset_left = 575.0
 offset_top = 607.0
 offset_right = 711.0

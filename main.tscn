@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cq865ws3wyf7i"]
+[gd_scene load_steps=13 format=3 uid="uid://cq865ws3wyf7i"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_bku42"]
 [ext_resource type="Texture2D" uid="uid://8fi20x1uyuly" path="res://assets/fondo.png" id="2_1nqki"]
@@ -10,6 +10,10 @@
 [ext_resource type="AudioStream" uid="uid://knd2uwcv5ay" path="res://sonidos/Loop 5.mp3" id="8_6q10k"]
 [ext_resource type="AudioStream" uid="uid://2on3v6ldgmos" path="res://sonidos/Loop 6.mp3" id="9_23n8e"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="10_g0tfh"]
+[ext_resource type="Texture2D" uid="uid://coxc3itu7nbib" path="res://menu/tablero.png" id="11_q0pwx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yravw"]
+texture = ExtResource("11_q0pwx")
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_bku42")
@@ -47,7 +51,13 @@ stream = ExtResource("9_23n8e")
 autoplay = true
 
 [node name="timer" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 216.0
+offset_bottom = 50.0
 theme = ExtResource("10_g0tfh")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_yravw")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,5 +1,8 @@
 extends RigidBody2D
 
+var sound_dragon: AudioStreamPlayer2D
+
+
 var velocidad = 10
 var direction = 1
 #var random = randi_range(1, 4) # Número aleatorio para cases.
@@ -10,6 +13,8 @@ var time = 0
 func _ready():
 	ini_posicion()
 	ini_animacion()
+	sound_dragon = $AudioStreamPlayer2D
+	sound_dragon.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

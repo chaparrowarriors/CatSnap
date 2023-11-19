@@ -11,10 +11,8 @@ var onworld = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	if Global.velocidadactual == 0:
-		Global.gatovelocidad = Global.gatovelocidadbase
-	else:
-		Global.gatovelocidad = Global.velocidadactual
+	print(Global.velocidadactual)
+	Global.gatovelocidad = Global.velocidadactual
 		
 	sound_gato = $AudioStreamPlayer2D
 	sound_gato.play()
@@ -27,6 +25,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	set_linear_velocity(direccion * Global.gatovelocidad)
 	on_screen()
 
@@ -97,8 +96,6 @@ func ini_velocidad():
 		direccion = Vector2(-1, 1)
 	elif random == 8:
 		direccion = Vector2(-1, -1)
-		
-	set_linear_velocity(direccion * Global.gatovelocidad)
 	
 func ini_animacion():
 		# Asignamos animacion
@@ -122,7 +119,6 @@ func ini_animacion():
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			
 			Global.velocidadactual = Global.gatovelocidad
 			Global.gatovelocidad = 0
 			sound_gato.stop()
