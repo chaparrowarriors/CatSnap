@@ -3,7 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if not FileAccess.file_exists(Global.ranking):
+		FileAccess.open(Global.ranking, FileAccess.WRITE)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

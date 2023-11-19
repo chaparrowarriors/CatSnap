@@ -41,11 +41,12 @@ func _ready():
 func _process(delta):
 	time_elapsed += delta
 	$timer.text = "Time: "+str(time_elapsed).pad_decimals(2)
-	var gato_onscreen = get_node("gato")
-	if gato_onscreen != null:
-		var gato_onworld = gato_onscreen.offworld
-		if gato_onscreen.offworld == true:
-			get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
+	if is_instance_valid("gato"): #para limpiar errores en la consola de debug
+		var gato_onscreen = get_node("gato")
+		if gato_onscreen != null:
+			var gato_onworld = gato_onscreen.offworld
+			if gato_onscreen.offworld == true:
+				get_tree().change_scene_to_file("res://menu/end_screen.tscn") 
 			
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
@@ -71,7 +72,8 @@ func _input(event):
 			Global.screenshot.blit_rect(screenshotTemp, rect, Vector2(0, 0))
 			Global.screenshot.crop(365, 365)
 			
-			await get_tree().create_timer(0.1).timeout
+			print(Global.gatovelocidad)
+			await get_tree().create_timer(0.2).timeout
 			if Global.gatovelocidad == 0:
 				Global.puntos = (Global.puntos_base / time_elapsed) * Global.nivel
 				Global.tiempo = time_elapsed
