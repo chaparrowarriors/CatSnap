@@ -10,6 +10,9 @@ func _ready():
 	$puntuation/valuecontainer/time_value.text = str(Global.tiempo).pad_decimals(2)
 	$puntuation/valuecontainer/level_value.text = str(Global.nivel)
 	$VBoxContainer/puntuacioncontainer/puntuacion_value.text = str(Global.puntuacion).pad_decimals(2)
+	# Desglose de la puntuacion del nivel
+	$puntuacion_desglose/desglosecontainer/puntuacion_valores.text = "100"+"    /" + str(Global.tiempo).pad_decimals(2)+"    *" + str(Global.nivel) + " = "+str(Global.puntos).pad_decimals(2)
+
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

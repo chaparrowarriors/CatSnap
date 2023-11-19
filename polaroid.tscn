@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbe1tbrmalgpy"]
+[gd_scene load_steps=12 format=3 uid="uid://2n61itm2gshs"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
@@ -11,6 +11,14 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftrbp"]
 texture = ExtResource("5_wjnwo")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7m4ln"]
+font_size = 27
+font_color = Color(0.631373, 0.239216, 0.105882, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oi6ms"]
+font_size = 13
+font_color = Color(0.631373, 0.262745, 0.0823529, 1)
 
 [node name="Polaroid" type="Control"]
 layout_mode = 3
@@ -26,7 +34,7 @@ position = Vector2(634, 358)
 texture = ExtResource("1_ptxil")
 
 [node name="polaroid" type="Sprite2D" parent="."]
-position = Vector2(660, 404)
+position = Vector2(624, 405)
 rotation = -0.120428
 texture = ExtResource("3_lmtwe")
 
@@ -40,11 +48,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -217.0
-offset_top = 60.0
-offset_right = 217.0
-offset_bottom = 163.0
+offset_left = -240.0
+offset_top = 55.0
+offset_right = 194.0
+offset_bottom = 158.0
 grow_horizontal = 2
+scale = Vector2(1, 0.994161)
 theme_override_fonts/font = ExtResource("4_gd2lo")
 theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxTexture_ftrbp")
@@ -54,10 +63,10 @@ vertical_alignment = 1
 
 [node name="puntuacion_text" type="Label" parent="."]
 layout_mode = 0
-offset_left = 511.0
-offset_top = 556.0
-offset_right = 665.0
-offset_bottom = 594.0
+offset_left = 490.0
+offset_top = 557.0
+offset_right = 644.0
+offset_bottom = 595.0
 rotation = -0.136765
 theme = ExtResource("6_8oh5s")
 theme_override_font_sizes/font_size = 30
@@ -66,10 +75,10 @@ text = "Puntuación:
 
 [node name="puntuacion_value" type="Label" parent="."]
 layout_mode = 0
-offset_left = 679.0
-offset_top = 531.0
-offset_right = 719.0
-offset_bottom = 569.0
+offset_left = 662.0
+offset_top = 533.0
+offset_right = 702.0
+offset_bottom = 571.0
 rotation = -0.136765
 theme = ExtResource("6_8oh5s")
 theme_override_font_sizes/font_size = 30
@@ -85,11 +94,13 @@ stream = ExtResource("8_3m58m")
 autoplay = true
 
 [node name="puntuation" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 94.0
 offset_top = 263.0
 offset_right = 134.0
 offset_bottom = 303.0
+scale = Vector2(1.00183, 0.990714)
 
 [node name="textcontainer" type="VBoxContainer" parent="puntuation"]
 layout_mode = 2
@@ -132,10 +143,10 @@ theme_override_font_sizes/font_size = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1008.0
-offset_top = 596.0
-offset_right = 1176.0
-offset_bottom = 663.0
+offset_left = 992.0
+offset_top = 557.0
+offset_right = 1160.0
+offset_bottom = 624.0
 
 [node name="puntuacioncontainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -154,5 +165,28 @@ layout_mode = 2
 theme = ExtResource("6_8oh5s")
 theme_override_font_sizes/font_size = 30
 text = "Continuar"
+
+[node name="puntuacion_desglose" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 560.0
+offset_right = 260.0
+offset_bottom = 627.0
+
+[node name="desglosecontainer" type="HBoxContainer" parent="puntuacion_desglose"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+
+[node name="puntuacion_valores" type="Label" parent="puntuacion_desglose/desglosecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+label_settings = SubResource("LabelSettings_7m4ln")
+
+[node name="puntuacion_leyenda" type="Label" parent="puntuacion_desglose"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 0
+text = "   Base                    Tiempo             Nivel"
+label_settings = SubResource("LabelSettings_oi6ms")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
