@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://g06i4y5m4nma"]
+[gd_scene load_steps=10 format=3 uid="uid://g06i4y5m4nma"]
 
 [ext_resource type="Script" path="res://animales/conejo.gd" id="1_3qeam"]
 [ext_resource type="Texture2D" uid="uid://blrk6c0fokrto" path="res://assets/secuenciaconejo.png" id="2_7wske"]
 [ext_resource type="Texture2D" uid="uid://dlwtjlipdrcde" path="res://assets/secuenciaconejo2.png" id="2_vofee"]
+[ext_resource type="AudioStream" uid="uid://bxdjlujh3hgnt" path="res://sonidos/conejo.mp3" id="4_50jsn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kysnk"]
 atlas = ExtResource("2_vofee")
@@ -57,6 +58,7 @@ sprite_frames = SubResource("SpriteFrames_jq2iq")
 animation = &"derecha"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_50jsn")
 volume_db = 6.847
 pitch_scale = 0.77
 autoplay = true
