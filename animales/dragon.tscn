@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce7djsuglrgky"]
+[gd_scene load_steps=10 format=3 uid="uid://ce7djsuglrgky"]
 
 [ext_resource type="Script" path="res://animales/dragon.gd" id="1_ebhhk"]
 [ext_resource type="Texture2D" uid="uid://dqdybdb6e5par" path="res://assets/secuenciadragon2.png" id="2_p3xnu"]
 [ext_resource type="Texture2D" uid="uid://c1y4b1dbb5v2a" path="res://assets/secuenciadragon.png" id="3_1p6cx"]
+[ext_resource type="AudioStream" uid="uid://csss7ik6ydgr8" path="res://sonidos/dragon.mp3" id="4_8scsg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_laf1a"]
 atlas = ExtResource("2_p3xnu")
@@ -55,3 +56,9 @@ sprite_frames = SubResource("SpriteFrames_ndrhe")
 animation = &"derecha"
 frame = 1
 frame_progress = 0.958499
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_8scsg")
+volume_db = 6.847
+pitch_scale = 0.77
+autoplay = true
