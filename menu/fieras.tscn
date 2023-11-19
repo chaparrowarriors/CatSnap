@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://bevd18megbnow"]
+[gd_scene load_steps=6 format=3 uid="uid://bevd18megbnow"]
+
+[ext_resource type="Script" path="res://menu/fieras.gd" id="1_hjq7i"]
+[ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="2_0vgd2"]
+[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="2_7u2mq"]
+[ext_resource type="AudioStream" uid="uid://jotdcjbpj1fm" path="res://sonidos/Menu.mp3" id="4_ulpfs"]
+[ext_resource type="Texture2D" uid="uid://3br1r8qqn7ia" path="res://assets/dragon_portada.png" id="5_r71pp"]
 
 [node name="fieras" type="Control"]
 layout_mode = 3
@@ -7,3 +13,52 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hjq7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(634, 358)
+texture = ExtResource("2_7u2mq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 1270.0
+offset_bottom = 720.0
+theme = ExtResource("2_0vgd2")
+bbcode_enabled = true
+text = "
+[center][font_size=40]Los Fieras responsables de esta barbarie:[/font_size]
+
+[font_size=30]
+Música por Carlos Borrás Puche
+Arte por Susana Morales Castilla
+
+Programación por:
+
+Cristian Garrido García
+José Cristobal López Zafra
+Miguel Ángel Cano Mesa
+Raúl Álvarez Hinojosa
+
+¡Muchas gracias por probar el primer proyecto de [i][b]Chaparro Warriors[/b][/i] !"
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 575.0
+offset_top = 607.0
+offset_right = 711.0
+offset_bottom = 651.0
+theme = ExtResource("2_0vgd2")
+theme_override_font_sizes/font_size = 25
+text = "VOLVER"
+
+[node name="cancion_menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ulpfs")
+volume_db = 7.495
+autoplay = true
+
+[node name="Dragon1" type="Sprite2D" parent="."]
+position = Vector2(-16, 731)
+rotation = -0.359538
+scale = Vector2(0.543181, 0.709335)
+texture = ExtResource("5_r71pp")
+flip_h = true
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
