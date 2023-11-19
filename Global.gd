@@ -10,3 +10,4 @@ var gatovelocidad = 0
 var velocidadactual = 200
 var screenshot : Image
 var tiempo = 0
+var ranking = "user://ranking.json"
