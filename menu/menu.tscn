@@ -68,10 +68,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -199.0
-offset_top = 80.0
-offset_right = -56.0
-offset_bottom = 145.0
+offset_left = -186.0
+offset_top = 40.0
+offset_right = -43.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
@@ -84,6 +84,10 @@ text = "JUGAR"
 [node name="HowToPlayBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "COMO JUGAR"
+
+[node name="Fieras" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "FIERAS"
 
 [node name="QuitBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -101,4 +105,5 @@ autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartBoton" to="." method="_on_start_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlayBoton" to="." method="_on_how_to_play_boton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Fieras" to="." method="_on_fieras_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitBoton" to="." method="_on_quit_boton_pressed"]
