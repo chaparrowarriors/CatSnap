@@ -7,5 +7,7 @@ var nivel = 1
 var nivel_final = 6
 var victoria = false
 var gatovelocidad = 0
+var velocidadactual = 0
 var gatovelocidadbase = 200
 var screenshot : Image
+var tiempo = 0

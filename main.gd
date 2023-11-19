@@ -40,6 +40,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time_elapsed += delta
+	$timer.text = str(time_elapsed).pad_decimals(2)
 	var gato_onscreen = get_node("gato")
 	if gato_onscreen != null:
 		var gato_onworld = gato_onscreen.offworld
@@ -49,16 +50,23 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			sound_camara.play()		
-# Obtén las coordenadas del evento de clic en relación con esta escena
 			var click_position = event.position
-# Capturamos la ventana al hacer click
-	# Obtiene la imagen de la pantalla
 			var screenshotTemp = get_viewport().get_texture().get_image()
+			var viewport_tam = get_viewport_rect().size
+			var x_max = viewport_tam.x
+			var y_max = viewport_tam.y
 
-			# get_viewport rectangle 100x100 centered on the mouse position
-			var rect = Rect2i(click_position.x - 182, click_position.y - 182, 365, 365)
-			# Crop the image to the rectangle using blip_rect
+			var pos_x = click_position.x - 182
+			var pos_y = click_position.y - 182
+			if pos_x < 0:
+				pos_x = 0
+			if pos_x+365 > x_max:
+				pos_x = x_max-365
+			if pos_y < 0:
+				pos_y = 0
+			if pos_y+365 > y_max:
+				pos_y = y_max-365
+			var rect = Rect2i(pos_x, pos_y, 365, 365)
 			Global.screenshot = screenshotTemp
 			Global.screenshot.blit_rect(screenshotTemp, rect, Vector2(0, 0))
 			Global.screenshot.crop(365, 365)
@@ -66,6 +74,7 @@ func _input(event):
 			await get_tree().create_timer(0.1).timeout
 			if Global.gatovelocidad == 0:
 				Global.puntos = (Global.puntos_base / time_elapsed) * Global.nivel
+				Global.tiempo = time_elapsed
 				Global.puntuacion += Global.puntos
 				if Global.nivel == Global.nivel_final:
 					Global.victoria = true
@@ -88,6 +97,7 @@ func nivel1():
 func nivel2():
 	nivel1()
 	inicializar_animal("toro")
+	inicializar_animal("toro")
 
 func nivel3():
 	nivel2()
@@ -97,10 +107,11 @@ func nivel3():
 		
 func nivel4():
 	nivel3()
-	inicializar_animal("conejo")
+	#inicializar_animal("conejo")
 		
 func nivel5():
 	nivel4()
+	inicializar_animal("tigre")
 	inicializar_animal("tigre")
 		
 func nivel6():

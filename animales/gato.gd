@@ -10,8 +10,12 @@ var onworld = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.gatovelocidad == 0:
+	
+	if Global.velocidadactual == 0:
 		Global.gatovelocidad = Global.gatovelocidadbase
+	else:
+		Global.gatovelocidad = Global.velocidadactual
+		
 	sound_gato = $AudioStreamPlayer2D
 	sound_gato.play()
 	
@@ -42,20 +46,20 @@ func ini_posicion():
 
 	# Case 1: Arriba
 	if random == 1:
-		pos_x = randf_range(x_min, x_max)
+		pos_x = randf_range( x_max/4, x_max*3/4)
 		pos_y = y_max + 50
-	# Case 2: Abajo
+		# Case 2: Abajo
 	elif random == 2:
-		pos_x = randf_range(x_min, x_max)
+		pos_x = randf_range( x_max/4, x_max*3/4)
 		pos_y = y_min - 50
 	# Case 3: Izquierda
 	elif random == 3:
 		pos_x = x_min - 50
-		pos_y = randf_range(y_min, y_max)
+		pos_y = randf_range( y_max/4, y_max*3/4)
 	# Case 4: Derecha
 	elif random == 4:
 		pos_x = x_max + 50
-		pos_y = randf_range(y_min, y_max)
+		pos_y = randf_range( y_max/4, y_max*3/4)
 	# Case 5: Esquina superior Izquierda
 	elif random == 5:
 		pos_x = x_min - 50
@@ -118,6 +122,8 @@ func ini_animacion():
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
+			
+			Global.velocidadactual = Global.gatovelocidad
 			Global.gatovelocidad = 0
 			sound_gato.stop()
 			$AnimatedSprite2D.stop()

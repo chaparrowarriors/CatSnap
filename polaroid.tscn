@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbe1tbrmalgpy"]
+[gd_scene load_steps=10 format=3 uid="uid://cbe1tbrmalgpy"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://coxc3itu7nbib" path="res://menu/tablero.png" id="5_wjnwo"]
 [ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="6_8oh5s"]
 [ext_resource type="AudioStream" uid="uid://c8rgp0cakq4yt" path="res://sonidos/Victoria.mp3" id="7_xj5mp"]
+[ext_resource type="AudioStream" uid="uid://c2vuyni618sr3" path="res://sonidos/camara.mp3" id="8_3m58m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ftrbp"]
 texture = ExtResource("5_wjnwo")
@@ -75,17 +76,83 @@ theme_override_font_sizes/font_size = 30
 text = "
 "
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1027.0
-offset_top = 628.0
-offset_right = 1227.0
-offset_bottom = 678.0
-theme = ExtResource("6_8oh5s")
-text = "Continuar"
-
 [node name="musica_victoria" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_xj5mp")
 autoplay = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="sonido_camara" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3m58m")
+autoplay = true
+
+[node name="puntuation" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 263.0
+offset_right = 134.0
+offset_bottom = 303.0
+
+[node name="textcontainer" type="VBoxContainer" parent="puntuation"]
+layout_mode = 2
+
+[node name="base_text" type="Label" parent="puntuation/textcontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "Base "
+
+[node name="time_text" type="Label" parent="puntuation/textcontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "/"
+
+[node name="level_text" type="Label" parent="puntuation/textcontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "*"
+
+[node name="valuecontainer" type="VBoxContainer" parent="puntuation"]
+layout_mode = 2
+
+[node name="base_value" type="Label" parent="puntuation/valuecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+
+[node name="time_value" type="Label" parent="puntuation/valuecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+
+[node name="level_value" type="Label" parent="puntuation/valuecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 596.0
+offset_right = 1176.0
+offset_bottom = 663.0
+
+[node name="puntuacioncontainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="puntuacion_text" type="Label" parent="VBoxContainer/puntuacioncontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+text = "Puntuacion Total: "
+
+[node name="puntuacion_value" type="Label" parent="VBoxContainer/puntuacioncontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "Continuar"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
