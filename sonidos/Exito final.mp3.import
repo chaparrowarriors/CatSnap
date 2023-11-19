@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cd2y01yvq8gav"
+path="res://.godot/imported/Exito final.mp3-653bbca89bedd6ba838157809d203325.mp3str"
+
+[deps]
+
+source_file="res://sonidos/Exito final.mp3"
+dest_files=["res://.godot/imported/Exito final.mp3-653bbca89bedd6ba838157809d203325.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

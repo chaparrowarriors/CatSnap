@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://flvj551pmc2o"]
+[gd_scene load_steps=12 format=3 uid="uid://flvj551pmc2o"]
 
 [ext_resource type="Script" path="res://creditos.gd" id="1_i3wpv"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_mfjv8"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://enwi6gsolb75" path="res://assets/conejo_portada.png" id="8_0sk7u"]
 [ext_resource type="Texture2D" uid="uid://bxkm1d8rrsmct" path="res://assets/tigre_portada.png" id="9_j6mmp"]
 [ext_resource type="Texture2D" uid="uid://3br1r8qqn7ia" path="res://assets/dragon_portada.png" id="10_rk3dw"]
+[ext_resource type="AudioStream" uid="uid://d4k7j8mptxg3h" path="res://sonidos/Creditos.mp3" id="11_w0mm4"]
 
 [node name="creditos" type="Node2D"]
 script = ExtResource("1_i3wpv")
@@ -84,4 +85,5 @@ texture = ExtResource("10_rk3dw")
 flip_h = true
 
 [node name="creditos_sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_w0mm4")
 autoplay = true

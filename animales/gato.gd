@@ -25,7 +25,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(Global.gatovelocidad)
+	
 	set_linear_velocity(direccion * Global.gatovelocidad)
 	on_screen()
 

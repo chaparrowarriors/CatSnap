@@ -8,7 +8,7 @@ func _ready():
 	
 	$Puntuacion.text = str(Global.puntuacion).pad_decimals(2)
 	Global.puntuacion = 0
-	
+
 	if Global.victoria:
 		$sonido_victoria.play()
 	else:
