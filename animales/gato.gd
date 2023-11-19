@@ -10,8 +10,12 @@ var onworld = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.gatovelocidad == 0:
+	
+	if Global.velocidadactual == 0:
 		Global.gatovelocidad = Global.gatovelocidadbase
+	else:
+		Global.gatovelocidad = Global.velocidadactual
+		
 	sound_gato = $AudioStreamPlayer2D
 	sound_gato.play()
 	
@@ -118,6 +122,8 @@ func ini_animacion():
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
+			
+			Global.velocidadactual = Global.gatovelocidad
 			Global.gatovelocidad = 0
 			sound_gato.stop()
 			$AnimatedSprite2D.stop()

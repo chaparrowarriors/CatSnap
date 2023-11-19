@@ -26,6 +26,6 @@ func _on_menu_pressed():
 
 func _on_jugar_pressed():
 	Global.nivel = 1
-	Global.gatovelocidad = Global.gatovelocidadbase
+	Global.velocidadactual = 0
 	Global.puntuacion = 0
 	get_tree().change_scene_to_file("res://main.tscn")
