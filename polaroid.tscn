@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://2ppgdlx0f1ea"]
+[gd_scene load_steps=10 format=3 uid="uid://cbe1tbrmalgpy"]
 
 [ext_resource type="Script" path="res://polaroid.gd" id="1_gk64s"]
 [ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_ptxil"]
@@ -83,6 +83,7 @@ offset_top = 628.0
 offset_right = 1227.0
 offset_bottom = 678.0
 theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
 text = "Continuar"
 
 [node name="musica_victoria" type="AudioStreamPlayer2D" parent="."]
@@ -92,5 +93,51 @@ autoplay = true
 [node name="sonido_camara" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_3m58m")
 autoplay = true
+
+[node name="puntuation" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 263.0
+offset_right = 134.0
+offset_bottom = 303.0
+
+[node name="textcontainer" type="VBoxContainer" parent="puntuation"]
+layout_mode = 2
+
+[node name="base_text" type="Label" parent="puntuation/textcontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "Base "
+
+[node name="time_text" type="Label" parent="puntuation/textcontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "/"
+
+[node name="level_text" type="Label" parent="puntuation/textcontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+text = "*"
+
+[node name="valuecontainer" type="VBoxContainer" parent="puntuation"]
+layout_mode = 2
+
+[node name="base_value" type="Label" parent="puntuation/valuecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+
+[node name="time_value" type="Label" parent="puntuation/valuecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
+
+[node name="level_value" type="Label" parent="puntuation/valuecontainer"]
+layout_mode = 2
+theme = ExtResource("6_8oh5s")
+theme_override_font_sizes/font_size = 30
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
