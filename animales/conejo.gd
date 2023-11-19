@@ -14,7 +14,6 @@ var time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.gatovelocidad = 200
 	sound_conejo = $AudioStreamPlayer2D
 	sound_conejo.play()
 	

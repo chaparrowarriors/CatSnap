@@ -4,7 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.nivel = 1
-	Global.velocidadactual = 0
+	Global.velocidadactual = 200
 	
 	$Puntuacion.text = str(Global.puntuacion).pad_decimals(2)
 	Global.puntuacion = 0
