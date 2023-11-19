@@ -6,6 +6,10 @@ func _ready():
 	$sonido_camara.play()
 	$polaroid/screenshot.texture = ImageTexture.create_from_image(Global.screenshot)
 	$puntuacion_value.text = str(Global.puntos).pad_decimals(2)
+	$puntuation/valuecontainer/base_value.text = str(Global.puntos_base)
+	$puntuation/valuecontainer/time_value.text = str(Global.tiempo).pad_decimals(2)
+	$puntuation/valuecontainer/level_value.text = str(Global.nivel)
+	$VBoxContainer/puntuacioncontainer/puntuacion_value.text = str(Global.puntuacion).pad_decimals(2)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
