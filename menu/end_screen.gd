@@ -52,12 +52,39 @@ func save_game():
 		json_string = contenido.get_line()
 		json.parse(json_string)
 		savedic = json.get_data()
-		var x = 1
 #		print(savedic)
 #		print(savedic[str(x)])
-		for indice in range(9):
-			if savedic.has(str(indice+1)):
-				print(savedic[str(indice+1)])
+		var dicindex = 0
+		var mayorque = false
+		while dicindex < 10 and mayorque == false:
+			dicindex += 1
+			if savedic.has(str(dicindex)):
+#				print(savedic[str(dicindex)])
+				if savedic[str(dicindex)]["value"] < puntuacionstored:
+					mayorque = true
+		if mayorque:
+			var olddicindex = 0
+			var newdicindex = 0
+			while newdicindex < 10:
+				olddicindex +=1
+				newdicindex +=1
+				if savedic.has(str(olddicindex)):
+					if olddicindex == dicindex:
+						newsavedic[str(newdicindex)] = {}
+						newsavedic[str(newdicindex)]["nombre"] = $VBoxContainer/TextEdit.text
+						newsavedic[str(newdicindex)]["value"] = snappedf(puntuacionstored, 0.01)
+						newdicindex += 1
+						newsavedic[str(newdicindex)] = {}
+						newsavedic[str(newdicindex)]["nombre"] = savedic[str(olddicindex)]["nombre"]
+						newsavedic[str(newdicindex)]["value"] = savedic[str(olddicindex)]["value"]
+					else:
+						newsavedic[str(newdicindex)] = {}
+						newsavedic[str(newdicindex)]["nombre"] = savedic[str(olddicindex)]["nombre"]
+						newsavedic[str(newdicindex)]["value"] = savedic[str(olddicindex)]["value"]
+			print(newsavedic)
+			json_string = JSON.stringify(newsavedic)
+			contenido = FileAccess.open(Global.ranking, FileAccess.WRITE)
+			contenido.store_line(json_string)
 #		for key in savedic:
 #			newsavedic[key] = {}
 #			if savedic[key]["value"] > puntuacionstored:

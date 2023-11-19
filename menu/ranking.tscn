@@ -26,6 +26,7 @@ text = "
 "
 
 [node name="Jugador1_name" type="Label" parent="."]
+visible = false
 offset_left = 444.0
 offset_top = 87.0
 offset_right = 566.0
@@ -34,6 +35,7 @@ text = "JUGADOR 1"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador2_name" type="Label" parent="."]
+visible = false
 offset_left = 443.0
 offset_top = 137.0
 offset_right = 568.0
@@ -42,6 +44,7 @@ text = "JUGADOR 2"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador3_name" type="Label" parent="."]
+visible = false
 offset_left = 444.0
 offset_top = 188.0
 offset_right = 569.0
@@ -50,6 +53,7 @@ text = "JUGADOR 3"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador4_name" type="Label" parent="."]
+visible = false
 offset_left = 443.0
 offset_top = 238.0
 offset_right = 570.0
@@ -58,6 +62,7 @@ text = "JUGADOR 4"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador5_name" type="Label" parent="."]
+visible = false
 offset_left = 443.0
 offset_top = 286.0
 offset_right = 568.0
@@ -66,6 +71,7 @@ text = "JUGADOR 5"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador6_name" type="Label" parent="."]
+visible = false
 offset_left = 444.0
 offset_top = 333.0
 offset_right = 570.0
@@ -74,6 +80,7 @@ text = "JUGADOR 6"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador7_name" type="Label" parent="."]
+visible = false
 offset_left = 445.0
 offset_top = 381.0
 offset_right = 570.0
@@ -82,6 +89,7 @@ text = "JUGADOR 7"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador8_name" type="Label" parent="."]
+visible = false
 offset_left = 445.0
 offset_top = 436.0
 offset_right = 571.0
@@ -90,6 +98,7 @@ text = "JUGADOR 8"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador9_name" type="Label" parent="."]
+visible = false
 offset_left = 447.0
 offset_top = 486.0
 offset_right = 573.0
@@ -98,6 +107,7 @@ text = "JUGADOR 9"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="Jugador10_name" type="Label" parent="."]
+visible = false
 offset_left = 447.0
 offset_top = 535.0
 offset_right = 585.0
@@ -106,6 +116,7 @@ text = "JUGADOR 10"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador1_puntos" type="Label" parent="."]
+visible = false
 offset_left = 714.0
 offset_top = 85.0
 offset_right = 818.0
@@ -114,6 +125,7 @@ text = "PUNTOS 1"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador2_puntos" type="Label" parent="."]
+visible = false
 offset_left = 714.0
 offset_top = 129.0
 offset_right = 821.0
@@ -122,6 +134,7 @@ text = "PUNTOS 2"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador3_puntos" type="Label" parent="."]
+visible = false
 offset_left = 716.0
 offset_top = 180.0
 offset_right = 823.0
@@ -130,6 +143,7 @@ text = "PUNTOS 3"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador4_puntos" type="Label" parent="."]
+visible = false
 offset_left = 718.0
 offset_top = 230.0
 offset_right = 827.0
@@ -138,6 +152,7 @@ text = "PUNTOS 4"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador5_puntos" type="Label" parent="."]
+visible = false
 offset_left = 719.0
 offset_top = 280.0
 offset_right = 826.0
@@ -146,6 +161,7 @@ text = "PUNTOS 5"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador6_puntos" type="Label" parent="."]
+visible = false
 offset_left = 720.0
 offset_top = 329.0
 offset_right = 828.0
@@ -154,6 +170,7 @@ text = "PUNTOS 6"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador7_puntos" type="Label" parent="."]
+visible = false
 offset_left = 721.0
 offset_top = 376.0
 offset_right = 846.0
@@ -162,6 +179,7 @@ text = "PUNTOS 7"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador8_puntos" type="Label" parent="."]
+visible = false
 offset_left = 722.0
 offset_top = 427.0
 offset_right = 830.0
@@ -170,6 +188,7 @@ text = "PUNTOS 8"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador9_puntos" type="Label" parent="."]
+visible = false
 offset_left = 723.0
 offset_top = 481.0
 offset_right = 831.0
@@ -178,6 +197,7 @@ text = "PUNTOS 9"
 label_settings = ExtResource("4_n5tb8")
 
 [node name="jugador10_puntos" type="Label" parent="."]
+visible = false
 offset_left = 725.0
 offset_top = 532.0
 offset_right = 845.0
