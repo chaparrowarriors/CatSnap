@@ -23,3 +23,7 @@ func _on_quit_boton_pressed():
 
 func _on_fieras_pressed():
 	get_tree().change_scene_to_file("res://menu/fieras.tscn") 
+
+
+func _on_ranking_pressed():
+	get_tree().change_scene_to_file("res://menu/ranking.tscn") 

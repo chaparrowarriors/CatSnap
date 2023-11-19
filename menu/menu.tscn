@@ -30,7 +30,7 @@ scale = Vector2(1.01496, 1.01528)
 texture = ExtResource("2_3ccod")
 
 [node name="Fry" type="Sprite2D" parent="."]
-position = Vector2(389, 606)
+position = Vector2(354, 609)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_xnm0l")
 
@@ -41,7 +41,7 @@ texture = ExtResource("4_ivyvy")
 flip_h = true
 
 [node name="Dragon1" type="Sprite2D" parent="."]
-position = Vector2(146, 222)
+position = Vector2(111, 228)
 rotation = -0.359538
 texture = ExtResource("5_nra7k")
 flip_h = true
@@ -68,29 +68,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -186.0
-offset_top = 40.0
-offset_right = -43.0
-offset_bottom = 132.0
+offset_left = -156.0
+offset_top = 52.0
+offset_right = 239.0
+offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3, 3)
 theme = ExtResource("4_eg0fd")
 
 [node name="StartBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "JUGAR"
 
 [node name="HowToPlayBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "COMO JUGAR"
+
+[node name="ranking" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "RANKING"
 
 [node name="Fieras" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "FIERAS"
 
 [node name="QuitBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "QUITAR"
 
 [node name="Tigre3" type="Sprite2D" parent="."]
@@ -105,5 +113,6 @@ autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartBoton" to="." method="_on_start_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlayBoton" to="." method="_on_how_to_play_boton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ranking" to="." method="_on_ranking_pressed"]
 [connection signal="pressed" from="VBoxContainer/Fieras" to="." method="_on_fieras_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitBoton" to="." method="_on_quit_boton_pressed"]
