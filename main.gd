@@ -40,7 +40,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time_elapsed += delta
-	$timer.text = str(time_elapsed).pad_decimals(2)
+	$timer.text = "Time: "+str(time_elapsed).pad_decimals(2)
 	var gato_onscreen = get_node("gato")
 	if gato_onscreen != null:
 		var gato_onworld = gato_onscreen.offworld
