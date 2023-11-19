@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://flvj551pmc2o"]
+
+[ext_resource type="Script" path="res://creditos.gd" id="1_i3wpv"]
+[ext_resource type="Texture2D" uid="uid://yt7p0xsom8gw" path="res://menu/background.png" id="1_mfjv8"]
+[ext_resource type="Theme" uid="uid://pes6ughwlfan" path="res://menu/tema.tres" id="2_1ofgi"]
+
+[node name="creditos" type="Node2D"]
+script = ExtResource("1_i3wpv")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(644.5, 357.5)
+scale = Vector2(1.01496, 1.01528)
+texture = ExtResource("1_mfjv8")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RigidBody2D"]
+offset_right = 1270.0
+offset_bottom = 720.0
+theme = ExtResource("2_1ofgi")
+bbcode_enabled = true
+text = "
+[center][font_size=40]Los Fieras responsables de esta barbarie:[/font_size]
+
+[font_size=30]
+Música por Carlos Borrás Puche
+Arte por Susana Morales Castilla
+
+Programación por:
+
+Cristian Garrido García
+José Cristobal López Zafra
+Miguel Ángel Cano Mesa
+Raúl Álvarez Hinojosa
+
+¡Muchas gracias por probar el primer proyecto de [i][b]Chaparro Warriors[/b][/i] !"
