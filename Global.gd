@@ -10,3 +10,4 @@ var gatovelocidad = 0
 var velocidadactual = 0
 var gatovelocidadbase = 200
 var screenshot : Image
+var tiempo = 0
