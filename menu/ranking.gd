@@ -11,13 +11,12 @@ func _ready():
 	# Leer el contenido JSON
 	var contenido = FileAccess.open(archivo, FileAccess.READ)
 	
-	while contenido.get_position() < contenido.get_length():
-		var json_string = contenido.get_line()
-		var json = JSON.new()
+	var json_string = contenido.get_line()
+	var json = JSON.new()
 		
-		var datos = json.parse(json_string)
+	var datos = json.parse(json_string)
 		
-		#$Jugador1_name = datos["1"]["nombre"]
+	$Jugador1_name.text = json.get_data()["1"]["nombre"]
 	# Acceder a los datos
 	#var nombre = datos["nombre"]
 	#var edad = datos["edad"]
