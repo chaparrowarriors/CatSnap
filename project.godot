@@ -23,6 +23,7 @@ Global="*res://Global.gd"
 
 window/size/viewport_width=1270
 window/size/viewport_height=720
+window/size/resizable=false
 mouse_cursor/custom_image="res://menu/cursor.png"
 mouse_cursor/custom_image_hotspot=Vector2(22, 17)
 
